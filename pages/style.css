@@ -44,8 +44,9 @@ a {
   top: -0.7rem;
   cursor: pointer;
 }
-/* NOT ONLY SECTION */
+/* NOT ONLY */
 .notOnlySection {
+  margin:  0 auto;
   background-image: url(../assets/images/start-screen-gradient-background.png);
   width: 1280px;
   height: 908px;
@@ -161,6 +162,7 @@ a {
 
 /* ABOUT SECTION */
 .aboutSection {
+  margin:  0 auto;
   display: flex;
   justify-content: center;
   width: 1280px;
@@ -199,6 +201,7 @@ a {
 }
 /*  FRIENDS SECTION  */
 .friendsSection {
+  margin:  0 auto;
   width: 1280px;
   height: 877px;
   background: #f6f6f6;
@@ -306,6 +309,7 @@ a {
 
 /* HELP SECTION */
 .helpSection {
+  margin:  0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,6 +352,7 @@ a {
 }
 /* DONATION SECTION */
 .donationSection {
+  margin:  0 auto;
   width: 1280px;
   height: 462px;
   background: #f6f6f6;
@@ -414,6 +419,7 @@ a {
 }
 /* FOOTER SECTION */
 .footerSection {
+  margin:  0 auto;
   background-image: url(../assets/images/footer-gradient-background.png);
   width: 1280px;
   height: 350px;
