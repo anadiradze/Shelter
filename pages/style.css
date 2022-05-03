@@ -302,12 +302,11 @@ a {
   transition: top ease 0.1s;
   cursor: pointer;
 }
-.petArticleHover:hover > .friendsPetButton {
-  background-color: #f1cdb3;
-  top: -0.5rem;
+.petArticleHover:hover{
+  background-color: #ffffff;
+  top: -0.8rem;
   cursor: pointer;
 }
-
 /* HELP SECTION */
 .helpSection {
   margin:  0 auto;
