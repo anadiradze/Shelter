@@ -19,6 +19,7 @@ html {
 body {
   font-size: 1.6rem;
   margin: 0 auto;
+  background-color: #f1cdb3;
 }
 a {
   text-decoration: none;
