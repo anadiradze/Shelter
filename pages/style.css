@@ -303,8 +303,11 @@ a {
   cursor: pointer;
 }
 .petArticleHover:hover{
-  background-color: #ffffff;
-  top: -0.8rem;
+  background-color: #fafafa;
+}
+.petArticleHover:hover > .friendsPetButton {
+  background-color: #f1cdb3;
+  top: -0.5rem;
   cursor: pointer;
 }
 /* HELP SECTION */
