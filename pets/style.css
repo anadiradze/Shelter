@@ -116,6 +116,12 @@ a {
   text-underline-offset: 0.3rem;
   text-decoration-color: #f1cdb3;
 }
+.mainAnchor{
+  font-family: "Arial";
+  font-size: 1.5rem;
+  line-height: 160%;
+  color: #292929;
+}
 /* MAIN SECTION */
 
 .mainSection {
