@@ -138,3 +138,151 @@
     margin-right: 7.5%;
   }
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  /* NOT ONLY SECTION */
+  .notOnlySection {
+    background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
+    height: 823px;
+    margin-top: 0rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .notOnlyContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 30rem;
+  }
+  .notOnlySubtitleH2 {
+    font-size: 2.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    padding-left: 3%;
+  }
+  .notOnlyP {
+    padding-left: 2%;
+  }
+  .notOnlyImageDiv {
+    margin-top: 22%;
+    margin-left: 17%;
+    width: 85%;
+  }
+  .header {
+    width: 100%;
+    gap: 20%;
+    margin: 3rem -1rem 0rem 1rem;
+  }
+  .burger {
+    display: inline-block;
+    margin-left: -6%;
+  }
+  .notOnlyText {
+    padding-top: 3%;
+    padding-left: 1%;
+    margin-top: -3%;
+  }
+  .notOnlyNav {
+    display: none;
+  }
+  .notOnlyButton {
+    align-self: center;
+    margin-left: 3%;
+  }
+  /* ABOUT SECTION */
+  .aboutSection {
+    height: 974px;
+    display: flex;
+    justify-content: center;
+    padding: 4.2rem 1rem 0rem 1rem;
+  }
+  .aboutContent {
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+  }
+  .aboutText {
+    text-align: center;
+    max-width: 30rem;
+    margin-bottom: 4.2rem;
+    padding-left: 5%;
+  }
+
+  .aboutSubtitleH2 {
+    letter-spacing: 0.06em;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 130%;
+    margin: 0;
+  }
+  .aboutP1 {
+    margin: 0;
+    padding: 0rem 1.5rem;
+    text-align: justify;
+  }
+  .aboutP2 {
+    padding: 0rem 1.5rem;
+    text-align: justify;
+  }
+
+  .dogsPhoto {
+    padding: 0 2rem;
+  }
+  /* FRIENDS */
+  .friendsSection {
+    height: 791px;
+  }
+  .friendsContent {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 0.3fr 2fr 0.5fr 0.2fr;
+    grid-template-columns: 1fr;
+  }
+  .friendsH2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 2.5rem;
+    line-height: 130%;
+    margin: 0;
+    padding-left: 5%;
+  }
+  .articleKatrine {
+    grid-column: 1/2;
+    margin: 0;
+    padding: 0;
+  }
+  .articleJennifer {
+    display: none;
+  }
+  .articleWoody {
+    display: none;
+  }
+  .arrow {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 0;
+  }
+  .friendsButton {
+    grid-column: 1/2;
+    margin-top: 6.3%;
+    margin-left: 6%;
+  }
+  .arrowRight{
+    margin-left: 15rem;
+    margin-top: -3rem;
+  }
+ .arrowLeft{
+  margin-right: 12rem;
+  margin-top: -3rem;
+ }
+ .friendsPetName {
+  padding-left: 7%;
+}
+}
