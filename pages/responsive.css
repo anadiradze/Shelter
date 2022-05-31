@@ -1,20 +1,21 @@
-@media (min-width: 768px) and (max-width: 1278px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .notOnlySection {
     background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
     position: relative;
     height: 1165px;
     margin-top: 0rem;
+    background-size: cover;
   }
   .header {
-    gap: 10%;
+    gap: 20%;
     margin-top: 4%;
     margin-left: 3.8%;
   }
   .notOnlyImageDiv {
     position: absolute;
-    top: 580px;
-    left: 169px;
-    right: 30px;
+    left: 16.9rem;
+    right: 3rem;
+    bottom: 0rem;
   }
   .notOnlyText {
     padding-top: 3%;
@@ -112,6 +113,7 @@
 
   /* FOOTER */
   .footerSection {
+    background-size: cover;
     position: relative;
     justify-content: flex-start;
     align-items: flex-start;
