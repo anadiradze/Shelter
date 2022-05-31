@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shelter</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
   </head>
   <body>
     <!-- NOT ONLY SECTION -->
-    <section class="notOnlySection" id="notOnlySection">
+    <section class="notOnlySection allSections" id="notOnlySection">
       <header class="header">
         <div class="notOnlyLogo">
           <a href="#notOnlySection">
@@ -61,9 +62,11 @@
       </div>
     </section>
     <!-- ABOUT SECTION  -->
-    <section class="aboutSection" id="aboutSection">
+    <section class="aboutSection allSections" id="aboutSection">
       <article class="aboutContent">
-        <img src="../assets/images/about-pets.png" alt="dogsPhoto" />
+        <div>
+          <img src="../assets/images/about-pets.png" alt="dogsPhoto" />
+        </div>
         <div class="aboutText">
           <h2 class="aboutSubtitleH2">
             About the shelter <br />
@@ -87,7 +90,7 @@
       </article>
     </section>
     <!-- FRIENDS SECTION -->
-    <section class="friendsSection" id="friendsSection">
+    <section class="friendsSection allSections" id="friendsSection">
       <div class="friendsContent">
         <h2 class="friendsH2">
           Our friends who <br />
@@ -121,97 +124,90 @@
           <img src="../assets/icons/Arrowright.svg" alt="arrowImg" />
         </div>
         <div class="friendsButton hoveredButton">
-          <a href="../pets/index.html"
-            ><p class="PinButton">Get to know the rest</p></a
+          <a class="PinButton" href="../pets/index.html"
+            >Get to know the rest</a
           >
         </div>
       </div>
     </section>
     <!-- HELP SECTION -->
-    <section class="helpSection" id="helpSection">
-      <h2 class="helpH2">
-        How you can help <br />
-        our shelter
-      </h2>
-      <div class="helpContent">
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/Vector.png"
-            alt="helpIcons"
-            class="helpImage petFood"
-          />
-          <h3 class="helpH3">Pet food</h3>
+    <section class="helpSection allSections" id="helpSection">
+      <div class="helpWrapper">
+        <div class="helpH2Wrapper">
+          <h2 class="helpH2">
+            How you can help <br />
+            our shelter
+          </h2>
         </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/transportation.png"
-            alt="helpIcons"
-            class="helpImage transportation"
-          />
-          <h3 class="helpH3">Transportation</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/toys.png"
-            alt="helpIcons"
-            class="helpImage toys"
-          />
-          <h3 class="helpH3">Toys</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/bowls-and-cups.png"
-            alt="helpIcons"
-            class="helpImage bowlsAndCups"
-          />
-          <h3 class="helpH3">Bowls and cups</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/shampoos.png"
-            alt="helpIcons"
-            class="helpImage shampoos"
-          />
-          <h3 class="helpH3">Shampoos</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/vitamins.png"
-            alt="helpIcons"
-            class="helpImage vitamins"
-          />
-          <h3 class="helpH3">Vitamins</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/medicines.png"
-            alt="helpIcons"
-            class="helpImage medicines"
-          />
-          <h3 class="helpH3">Medicines</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/collars-or-leashes.png"
-            alt="helpIcons"
-            class="helpImage collarsAndLashes"
-          />
-          <h3 class="helpH3">Collars / leashes</h3>
-        </div>
-        <div class="iconsAndTexts hovered">
-          <img
-            src="../assets/icons/sleeping-area.png"
-            alt="helpIcons"
-            class="helpImage sleepingAreas"
-          />
-          <h3 class="helpH3">Sleeping areas</h3>
+        <div class="helpContent">
+          <div class="iconsAndTexts petFood hovered">
+            <div class="helpImage">
+              <img src="../assets/icons/Vector.png" alt="helpIcons" />
+            </div>
+            <h3 class="helpH3">Pet food</h3>
+          </div>
+          <div class="iconsAndTexts transportation hovered">
+            <div class="helpImage">
+              <img src="../assets/icons/transportation.png" alt="helpIcons" />
+            </div>
+            <h3 class="helpH3">Transportation</h3>
+          </div>
+          <div class="iconsAndTexts toys hovered">
+            <div class="helpImage">
+              <img src="../assets/icons/toys.png" alt="helpIcons" />
+            </div>
+            <h3 class="helpH3">Toys</h3>
+          </div>
+          <div class="iconsAndTexts bowlsAndCups hovered">
+            <div class="helpImage">
+              <img
+                src="../assets/icons/bowls-and-cups.png"
+                alt="helpIcons"
+                class="bowlsAndCups"
+              />
+            </div>
+            <h3 class="helpH3">Bowls and cups</h3>
+          </div>
+          <div class="iconsAndTexts shampoos hovered">
+            <div class="helpImage">
+              <img src="../assets/icons/shampoos.png" alt="helpIcons" />
+            </div>
+            <h3 class="helpH3">Shampoos</h3>
+          </div>
+          <div class="iconsAndTexts vitamins hovered">
+            <div class="helpImage">
+              <img src="../assets/icons/vitamins.png" alt="helpIcons" />
+            </div>
+            <h3 class="helpH3">Vitamins</h3>
+          </div>
+          <div class="iconsAndTexts medicines hovered">
+            <div class="helpImage">
+              <img src="../assets/icons/medicines.png" alt="helpIcons" />
+            </div>
+            <h3 class="helpH3">Medicines</h3>
+          </div>
+          <div class="iconsAndTexts collarsAndLashes hovered">
+            <div class="helpImage">
+              <img
+                src="../assets/icons/collars-or-leashes.png"
+                alt="helpIcons"
+              />
+            </div>
+            <h3 class="helpH3">Collars / leashes</h3>
+          </div>
+          <div class="iconsAndTexts sleepingAreas hovered">
+            <img src="../assets/icons/sleeping-area.png" alt="helpIcons" />
+            <h3 class="helpH3">Sleeping areas</h3>
+          </div>
         </div>
       </div>
     </section>
     <!-- DONATION SECTION -->
-    <section class="donationSection" id="donationSection">
+    <section class="donationSection allSections" id="donationSection">
       <article class="donationContent">
-        <img src="../assets/images/donation-dog.png" alt="donationDog" />
+        <div class="donationDogImg">
+          <img src="../assets/images/donation-dog.png" alt="donationDog" class="donationDogImg1"/>
+        </div>
         <article class="donationText">
           <h3 class="donationH3">
             You can also <br />
@@ -219,10 +215,12 @@
           </h3>
           <h6 class="donationH6">Name of the bank / Type of bank account</h6>
           <div class="donationCreditCard hovered">
-            <img
-              src="../assets/icons/credit-card.svg"
-              alt="donationCreditCard"
-            />
+            <div class="donationImg">
+              <img
+                src="../assets/icons/credit-card.svg"
+                alt="donationCreditCard"
+              />
+            </div>
             <a href="#" class="donationAnchor hovered"
               >8380 2880 8028 8791 7435</a
             >
@@ -237,7 +235,7 @@
       </article>
     </section>
     <!-- FOOTER SECTION -->
-    <section class="footerSection">
+    <section class="footerSection allSections">
       <footer class="footer" id="footer">
         <div class="footerContacts footerFlex">
           <h3 class="footerH3">
@@ -289,9 +287,7 @@
                 class="pinIcon"
                 alt="pinIcon"
               />
-              <p class="footerP">
-                1 Central Street, Boston <br />
-                (entrance from the store)
+              <p class="footerP">1 Central Street, Boston <br />(entrance from the store)
               </p>
             </a>
           </div>

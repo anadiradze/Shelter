@@ -1,0 +1,138 @@
+@media (min-width: 768px) and (max-width: 1279px) {
+  .notOnlySection {
+    background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
+    position: relative;
+    height: 1165px;
+    margin-top: 0rem;
+  }
+  .header {
+    gap: 10%;
+    margin-top: 4%;
+    margin-left: 3.8%;
+  }
+  .notOnlyImageDiv {
+    position: absolute;
+    top: 580px;
+    left: 169px;
+    right: 30px;
+  }
+  .notOnlyText {
+    padding-top: 3%;
+    padding-left: 1%;
+    margin-top: -3%;
+  }
+  .notOnlyUl {
+    padding-left: 3.3%;
+  }
+  .notOnlyButton {
+    align-self: center;
+  }
+  /* ABOUT SECTION */
+  .aboutSection {
+    height: 1048px;
+  }
+  .aboutContent {
+    flex-direction: column-reverse;
+  }
+  .aboutText {
+    width: 64%;
+    padding-bottom: 11%;
+  }
+  /* FRIENDS */
+  .friendsContent {
+    grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
+  }
+  .articleWoody {
+    display: none;
+  }
+  .friendsButton {
+    grid-column: 2/4;
+    margin-left: 1%;
+  }
+  .friendsH2 {
+    grid-column: 1/5;
+    margin-top: 5%;
+    padding-left: 2%;
+  }
+  .articleKatrine {
+    padding-right: 3%;
+  }
+  .articleJennifer {
+    padding-left: 9%;
+  }
+  /* HELP */
+  .helpSection {
+    height: 780px;
+    padding-left: 1%;
+  }
+  .helpContent {
+    margin: 6rem 6.9rem 10rem 6.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: r1fr 1fr 1fr;
+    row-gap: 5.5rem;
+    column-gap: 6rem;
+    justify-items: center;
+    align-items: center;
+  }
+  /* DONATION */
+  .donationSection {
+    height: 785px;
+  }
+  .donationContent {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-width: 100%;
+    row-gap: 6rem;
+  }
+  .donationDogImg {
+    max-width: 50.5rem;
+    max-height: 26.1rem;
+  }
+  .donationCreditCard {
+    margin-left: 3%;
+}
+  .donationH6{
+    white-space: nowrap;
+  }
+  .donationH3 {
+    padding-left: 3%;
+  }
+  .donationH6{
+    padding-left: 3%;
+  }
+  .donationP{
+    padding-left: 3%;
+  }
+  .donationDogImg1{
+    max-width: 137%;
+    margin-left: -6rem;
+}
+  }
+  /* FOOTER */
+  .footerSection {
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 640px;
+    background-image: url(../assets/images/responsive-footer-gradient-background.png);
+  }
+  .footerContacts {
+    margin-left: 7.5%;
+    margin-top: 3.9%;
+}
+  .footer {
+    flex-wrap: wrap;
+  }
+  .footerImage {
+    position: absolute;
+    top: 51%;
+    left: 31%;
+  }
+
+  .footerForVisit {
+    margin-bottom: 0%;
+    margin-right: 7.5%;
+  }
+}
