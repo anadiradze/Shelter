@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1278px) {
   .notOnlySection {
     background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
     position: relative;
@@ -92,24 +92,24 @@
   }
   .donationCreditCard {
     margin-left: 3%;
-}
-  .donationH6{
+  }
+  .donationH6 {
     white-space: nowrap;
   }
   .donationH3 {
     padding-left: 3%;
   }
-  .donationH6{
+  .donationH6 {
     padding-left: 3%;
   }
-  .donationP{
+  .donationP {
     padding-left: 3%;
   }
-  .donationDogImg1{
+  .donationDogImg1 {
     max-width: 137%;
     margin-left: -6rem;
-}
   }
+
   /* FOOTER */
   .footerSection {
     position: relative;
@@ -121,7 +121,7 @@
   .footerContacts {
     margin-left: 7.5%;
     margin-top: 3.9%;
-}
+  }
   .footer {
     flex-wrap: wrap;
   }
