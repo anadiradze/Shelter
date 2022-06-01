@@ -319,20 +319,24 @@ img {
     height: auto;
     width: auto;
     background-size: cover;
+    padding: 3rem 4rem 3rem 3rem;
   }
   .mainSection {
+    padding: 0;
     padding: 6rem 3rem 0rem 3rem;
     height: auto;
     width: auto;
     background-size: cover;
   }
   .mainContainer {
-    padding: 2rem 5.4rem 9.8rem 5.4rem;
+    padding: 0;
+    padding: 2rem 6.4rem 7.5rem 6.4rem;
     gap: 3rem;
   }
   .ourPets {
+    padding: 0;
     column-gap: 4rem;
-    row-gap: 3rem;
+    row-gap: 6rem;
     justify-content:normal
   }
   .scarlet {
@@ -340,6 +344,9 @@ img {
   }
   .freddie {
     display: none;
+  }
+  .icons{
+    padding-top: 7%;
   }
   /* footer */
   .footerSection {
@@ -363,8 +370,8 @@ img {
     left: 31%;
   }
   .footerForVisit {
-    margin-bottom: 0%;
-    margin-right: 7.5%;
+    margin-right: 9.5%;
+    margin-bottom: -1.2%;
   }
 
 }
