@@ -140,10 +140,10 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
- .allSections{
-   overflow-x: hidden;
-   overflow-y: hidden;
- }
+  .allSections {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
   /* NOT ONLY SECTION */
   .notOnlySection {
     background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
@@ -167,10 +167,10 @@
     font-size: 2.5rem;
     line-height: 130%;
     letter-spacing: 0.06em;
-    padding-left: 3%;
-  }
+    padding-right: 3%;
+}
   .notOnlyP {
-    padding-left: 2%;
+    padding-right: 2%;
   }
   .notOnlyImageDiv {
     margin-top: 22%;
@@ -180,7 +180,7 @@
   .header {
     width: 100%;
     gap: 20%;
-    margin: 3rem 0rem 0rem 0rem;
+    margin: 3rem 0rem 0rem 2rem;
   }
   .burger {
     display: inline-block;
@@ -196,7 +196,7 @@
   }
   .notOnlyButton {
     align-self: center;
-    margin-left: 3%;
+    margin-right: 3%;
   }
   /* ABOUT SECTION */
   .aboutSection {
@@ -215,7 +215,9 @@
     text-align: center;
     max-width: 30rem;
     margin-bottom: 4.2rem;
-    padding-left: 5%;
+    padding-left: 3%;
+    gap: 2.3rem;
+
   }
 
   .aboutSubtitleH2 {
@@ -227,8 +229,13 @@
   }
   .aboutP1 {
     margin: 0;
-    padding: 0rem 1.5rem;
+    padding: 0rem 1.3rem;
     text-align: justify;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 160%;
   }
   .aboutP2 {
     padding: 0rem 1.5rem;
@@ -255,7 +262,6 @@
     font-size: 2.5rem;
     line-height: 130%;
     margin: 0;
-    padding-left: 5%;
   }
   .articleKatrine {
     grid-column: 1/2;
@@ -277,25 +283,20 @@
   .friendsButton {
     grid-column: 1/2;
     margin-top: 10.3%;
-    margin-left: 6%;
   }
   .arrowRight {
-    margin-left: 15rem;
+    margin-left: 13rem;
     margin-top: 4rem;
   }
   .arrowLeft {
-    margin-right: 12rem;
+    margin-right: 13rem;
     margin-top: 4rem;
   }
-  .friendsPetName {
-    padding-left: 7%;
-  }
+
   .katherineImg {
     padding-top: 4rem;
   }
-  .friendsPetButton {
-    margin-left: 2rem;
-}
+
   /* HELP SECTION */
   .helpSection {
     height: 74.5rem;
@@ -314,13 +315,13 @@
     margin: 0rem;
     padding: 0rem;
   }
-  .helpH2Wrapper{
-    width: 22rem;
+  .helpH2Wrapper {
+    width: 29rem;
   }
   .helpH2 {
     font-size: 2.5rem;
     line-height: 130%;
-    letter-spacing: 0.06em
+    letter-spacing: 0.06em;
   }
   .helpH3 {
     font-size: 1.5rem;
@@ -355,12 +356,17 @@
   }
   .donationH6 {
     padding: 0;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    line-height: 160%;
+    letter-spacing: 0;
   }
   .donationP {
     padding: 0;
+    padding-right: 6%;
   }
   .donationCreditCard {
-    width: 281px;
+    width: 289px;
     height: 43px;
     margin: 0;
   }
@@ -369,25 +375,78 @@
     font-size: 1.5rem;
     line-height: 110%;
   }
+  .donationDogImg {
+    margin-left: 8.2%;
+    margin-top: 12%;
+}
+.donationImg {
+  margin: 0.5rem 0rem 0rem 2.5rem;
+}
   /* FOOTER */
   .footerSection {
     height: 80.9rem;
     background-size: cover;
     padding: 0rem 1rem 0rem 1rem;
-    align-items: center;
+    align-items: flex-start;
+
   }
   .footer {
     flex-direction: column;
   }
   .footerH3 {
+    display: none;
+  }
+  .footerContacts,
+  .footerForVisit {
+    justify-content: center;
+  }
+  .footerH3320{
     font-size: 2.5rem;
     line-height: 3.25rem;
+    color: white;
+    display: block;
   }
-  .footerContacts, .footerForVisit{
-    justify-content: center;
+  .footerContacts{
+    padding-right: 2%;
+    padding-top: 10%;
+    font-size: 2.5rem;
+    line-height: 130%;
     text-align: center;
+    letter-spacing: 0.06em;
+    gap: 3rem;
   }
-  .footerImage{
+  .footerForVisit{
+    padding-right: 2%;
+    padding-top: 10%;
+    font-size: 2.5rem;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    gap: 1.7rem;
+  }
+  .tel{
+    padding-left: 1.5%;
+
+  }
+  .email{
+    padding-top: 4%;
+
+  }
+  .emailP{
+    padding-bottom: 5%;
+  }
+  .footerImage {
     align-self: flex-end;
+    padding-top: 10%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .locP{
+    padding-top: 6%;
+
+  }
+  .locP2{
+    padding-top: 2%;
+
   }
 }
