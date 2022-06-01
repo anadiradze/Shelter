@@ -79,6 +79,9 @@ a {
   color: #545454;
   white-space: nowrap;
 }
+.burger {
+  display: none;
+}
 .notOnlySubtitleH6 {
   font-family: "Arial";
   font-size: 1.3rem;
@@ -312,6 +315,9 @@ img {
 .footerH3320 {
   display: none;
 }
+.mainH3360{
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .headerSection {
@@ -330,14 +336,14 @@ img {
   }
   .mainContainer {
     padding: 0;
-    padding: 2rem 6.4rem 7.5rem 6.4rem;
+    padding: 2rem 4.8rem 7.5rem 6.3rem;
     gap: 3rem;
   }
   .ourPets {
     padding: 0;
     column-gap: 4rem;
     row-gap: 6rem;
-    justify-content:normal
+    justify-content: normal;
   }
   .scarlet {
     display: none;
@@ -345,7 +351,7 @@ img {
   .freddie {
     display: none;
   }
-  .icons{
+  .icons {
     padding-top: 7%;
   }
   /* footer */
@@ -370,8 +376,139 @@ img {
     left: 31%;
   }
   .footerForVisit {
-    margin-right: 9.5%;
+    margin-right: 7.5%;
     margin-bottom: -1.2%;
   }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .headerSection {
+    padding: 0;
+    margin: 0;
+    padding: 3rem 5rem 3rem 1rem;
+    gap: 4.3rem;
+    width: auto;
+    overflow: hidden;
+  }
+  .burger {
+    display: inline-block;
+  }
+  .mainContainer {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: auto;
+    padding: 0rem 1.5rem 4.2rem 3rem;
+    overflow: hidden;
+    gap: 4.2rem;
+  }
+  .mainSection {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    padding: 4.2rem 1rem 0rem 1rem;
+  }
+  .ourPets {
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+  }
+  .notOnlyNav {
+    display: none;
+  }
+  .scarlet {
+    display: none;
+  }
+  .sophia {
+    display: none;
+  }
+  .charley {
+    display: none;
+  }
+  .freddie {
+    display: none;
+  }
+  .timmy {
+    display: none;
+  }
+  .icons {
+    gap: 1rem;
+    padding-top: 11%;
 
+  }
+  /* FONTS */
+  .mainH3 {
+    font-family: "Georgia";
+    font-size: 2.5rem;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  /* FOOTER */
+  .footerSection {
+    height: 80.9rem;
+    background-size: cover;
+    padding: 0rem 1rem 0rem 1rem;
+    align-items: flex-start;
+    width: auto;
+    overflow: hidden;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footerH3 {
+    display: none;
+  }
+  .footerContacts,
+  .footerForVisit {
+    justify-content: center;
+    padding-right: 1%;
+    font-size: 2.5rem;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  .footerH3320 {
+    font-family: "Georgia";
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    color: white;
+    display: block;
+  }
+  .footerH3fonts{
+    padding-left: 7%;
+  }
+  .footerContacts {
+    padding-left: 6%;
+    gap: 3rem;
+    padding-top: 11.5%;
+  }
+  .footerForVisit {
+    gap: 1.7rem;
+    padding-top: 8%;
+  }
+  .tel {
+    padding-left: 1.5%;
+    padding-top: 1%;
+  }
+  .email {
+    padding-top: 4%;
+  }
+  .emailP {
+    padding-bottom: 3%;
+  }
+  .footerImage {
+    align-self: flex-end;
+    padding-top: 11%;
+    padding-left: 8%;
+    padding-right: 2%;
+  }
+  .locP {
+    padding-top: 8.4%;
+  }
+  .locP2 {
+    padding-top: 1%;
+  }
 }
