@@ -56,7 +56,7 @@ a {
 /* HEADER SECTION */
 .headerSection {
   display: flex;
-  justify-content: space-between;
+  gap: 57rem;
   align-items: center;
   margin: 0 auto;
   width: 1280px;
@@ -77,6 +77,7 @@ a {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: #545454;
+  white-space: nowrap;
 }
 .notOnlySubtitleH6 {
   font-family: "Arial";
@@ -84,12 +85,14 @@ a {
   line-height: 1.5rem;
   letter-spacing: 0.1em;
   color: #292929;
+  white-space: nowrap;
 }
 .notOnlyUl {
   display: flex;
   gap: 3.5rem;
 }
-.notOnlyAnchor,.mainAnchor{
+.notOnlyAnchor,
+.mainAnchor {
   white-space: nowrap;
 }
 .notOnlyAnchor {
@@ -119,7 +122,7 @@ a {
   text-underline-offset: 0.3rem;
   text-decoration-color: #f1cdb3;
 }
-.mainAnchor{
+.mainAnchor {
   font-family: "Arial";
   font-size: 1.5rem;
   line-height: 160%;
@@ -134,7 +137,7 @@ a {
   background: #f6f6f6;
   padding: 8rem 4rem 10rem 4rem;
 }
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,9 +229,10 @@ a {
   letter-spacing: 0.06em;
   color: #292929;
 }
-.innerbg:hover, .innerbg:active {
-cursor: pointer;
-top: -0.2rem;
+.innerbg:hover,
+.innerbg:active {
+  cursor: pointer;
+  top: -0.2rem;
 }
 .innerArrow {
   color: #cdcdcd;
@@ -238,11 +242,11 @@ top: -0.2rem;
   background: #f1cdb3;
   border-radius: 100px;
 }
-.innerbg{
+.innerbg {
   position: relative;
   top: 0;
   transition: top ease 0.1s;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 /* FOOTER SECTION */
@@ -269,7 +273,6 @@ top: -0.2rem;
 .footerContacts {
   gap: 4rem;
   margin-bottom: 3%;
-  
 }
 .footerForVisit {
   gap: 3.4rem;
@@ -306,6 +309,62 @@ img {
   width: 6rem;
   height: 6rem;
 }
-.footerH3320{
+.footerH3320 {
   display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .headerSection {
+    gap: 8.5rem;
+    height: auto;
+    width: auto;
+    background-size: cover;
+  }
+  .mainSection {
+    padding: 6rem 3rem 0rem 3rem;
+    height: auto;
+    width: auto;
+    background-size: cover;
+  }
+  .mainContainer {
+    padding: 2rem 5.4rem 9.8rem 5.4rem;
+    gap: 3rem;
+  }
+  .ourPets {
+    column-gap: 4rem;
+    row-gap: 3rem;
+    justify-content:normal
+  }
+  .scarlet {
+    display: none;
+  }
+  .freddie {
+    display: none;
+  }
+  /* footer */
+  .footerSection {
+    background-size: cover;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 640px;
+    background-image: url(../assets/images/responsive-footer-gradient-background.png);
+  }
+  .footerContacts {
+    margin-left: 7.5%;
+    margin-top: 3.9%;
+  }
+  .footer {
+    flex-wrap: wrap;
+  }
+  .footerImage {
+    position: absolute;
+    top: 51%;
+    left: 31%;
+  }
+  .footerForVisit {
+    margin-bottom: 0%;
+    margin-right: 7.5%;
+  }
+
 }
