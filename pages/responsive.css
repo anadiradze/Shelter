@@ -257,6 +257,7 @@
     grid-column: 1/2;
     margin: 0;
     padding: 0;
+    gap: 3rem;
   }
   .articleJennifer {
     display: none;
@@ -271,18 +272,113 @@
   }
   .friendsButton {
     grid-column: 1/2;
-    margin-top: 6.3%;
+    margin-top: 10.3%;
     margin-left: 6%;
   }
-  .arrowRight{
+  .arrowRight {
     margin-left: 15rem;
-    margin-top: -3rem;
+    margin-top: 4rem;
   }
- .arrowLeft{
-  margin-right: 12rem;
-  margin-top: -3rem;
- }
- .friendsPetName {
-  padding-left: 7%;
-}
+  .arrowLeft {
+    margin-right: 12rem;
+    margin-top: 4rem;
+  }
+  .friendsPetName {
+    padding-left: 7%;
+  }
+  .katherineImg {
+    padding-top: 4rem;
+  }
+  /* HELP SECTION */
+  .helpSection {
+    height: 74.5rem;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+  }
+  .helpContent {
+    margin: 0;
+    padding: 0;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-top: 2rem;
+  }
+  .helpWrapper {
+    margin: 0rem;
+    padding: 0rem;
+  }
+  .helpH2 {
+    font-size: 2.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    padding-right: 2rem;
+  }
+  .helpH3 {
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+  }
+  .helpImage {
+    width: 5rem;
+    height: 5rem;
+  }
+  .iconsAndTexts {
+    gap: 2rem;
+  }
+  /* DONATION */
+  .donationSection {
+    padding: 0rem 1rem 4.2rem 1rem;
+    height: auto;
+  }
+  .donationContent {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin: 0rem;
+    text-align: center;
+    gap: 0;
+    width: 30rem;
+    height: 46rem;
+  }
+  .donationH3 {
+    font-size: 2.5rem;
+    line-height: 130%;
+    padding: 0;
+  }
+  .donationH6 {
+    padding: 0;
+  }
+  .donationP {
+    padding: 0;
+  }
+  .donationCreditCard {
+    width: 281px;
+    height: 43px;
+    margin: 0;
+  }
+  .donationAnchor {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 110%;
+  }
+  /* FOOTER */
+  .footerSection {
+    height: 80.9rem;
+    background-size: cover;
+    padding: 0rem 1rem 0rem 1rem;
+    align-items: center;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footerH3 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+  .footerContacts, .footerForVisit{
+    justify-content: center;
+    text-align: center;
+  }
+  .footerImage{
+    align-self: flex-end;
+  }
 }
