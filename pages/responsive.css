@@ -140,6 +140,10 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+ .allSections{
+   overflow-x: hidden;
+   overflow-y: hidden;
+ }
   /* NOT ONLY SECTION */
   .notOnlySection {
     background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
@@ -170,13 +174,13 @@
   }
   .notOnlyImageDiv {
     margin-top: 22%;
-    margin-left: 17%;
+    margin-left: 14%;
     width: 85%;
   }
   .header {
     width: 100%;
     gap: 20%;
-    margin: 3rem -1rem 0rem 1rem;
+    margin: 3rem 0rem 0rem 0rem;
   }
   .burger {
     display: inline-block;
@@ -199,7 +203,7 @@
     height: 974px;
     display: flex;
     justify-content: center;
-    padding: 4.2rem 1rem 0rem 1rem;
+    padding: 4.2rem 1rem 0rem 0rem;
   }
   .aboutContent {
     flex-direction: column-reverse;
@@ -289,6 +293,9 @@
   .katherineImg {
     padding-top: 4rem;
   }
+  .friendsPetButton {
+    margin-left: 2rem;
+}
   /* HELP SECTION */
   .helpSection {
     height: 74.5rem;
@@ -307,11 +314,13 @@
     margin: 0rem;
     padding: 0rem;
   }
+  .helpH2Wrapper{
+    width: 22rem;
+  }
   .helpH2 {
     font-size: 2.5rem;
     line-height: 130%;
-    letter-spacing: 0.06em;
-    padding-right: 2rem;
+    letter-spacing: 0.06em
   }
   .helpH3 {
     font-size: 1.5rem;

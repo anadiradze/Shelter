@@ -339,7 +339,7 @@ a {
   width: 100%;
 }
 .helpH2Wrapper {
-  min-width: 30.8rem;
+max-width: 30.8rem;
   min-height: 9rem;
 }
 .helpH2 {
