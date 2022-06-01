@@ -337,6 +337,10 @@ a {
 .helpWrapper {
   margin: 8rem 4rem 10rem 4rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .helpH2Wrapper {
 max-width: 30.8rem;
@@ -350,6 +354,7 @@ max-width: 30.8rem;
   letter-spacing: 0.06em;
   color: #545454;
   padding-left: 1.3%;
+  width: 101%;
 }
 .helpContent {
   display: flex;
@@ -359,7 +364,7 @@ max-width: 30.8rem;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  column-gap: 12rem;
+  column-gap: 11.4rem;
   row-gap: 5rem;
   margin: 6rem 8.5rem 0rem 8.5rem;
   margin-left: 12rem;
