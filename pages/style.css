@@ -99,9 +99,8 @@ a {
 }
 .underlined {
   text-decoration: underline;
-  text-underline-offset: 0.4rem;
+  text-underline-offset: 1.25rem;
   text-decoration-thickness: 3px;
-  text-underline-offset: 0.3rem;
   text-decoration-color: #f1cdb3;
 }
 .underlined:hover,
@@ -524,3 +523,5 @@ img {
 .footerH3320{
   display: none;
 }
+
+

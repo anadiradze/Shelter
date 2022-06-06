@@ -11,15 +11,15 @@
   <body>
     <!-- NOT ONLY SECTION -->
     <section class="notOnlySection allSections" id="notOnlySection">
-      <header class="header">
+      <header class="header" id="headerinMain">
         <div class="notOnlyLogo">
           <a href="#notOnlySection">
             <h1 class="notOnlyH1 hovered">Cozy House</h1>
           </a>
           <h6 class="notOnlySubtitleH6">Shelter for pets in Boston</h6>
         </div>
-        <div class="burger">
-          <img src="../assets/images/Burger.png" alt="">
+        <div id="burger" class="burger">
+          <img src="../assets/images/Burger.png" alt="burger" id="burgerImg" />
         </div>
         <nav class="notOnlyNav">
           <ul class="notOnlyUl">
@@ -38,29 +38,31 @@
           </ul>
         </nav>
       </header>
-      <div class="notOnlyContent">
-        <div class="notOnlyText">
-          <h2 class="notOnlySubtitleH2">
-            Not only people <br />
-            need a house
-          </h2>
-          <p class="notOnlyP">
-            We offer to give a chance to a little and nice puppy with an
-            extremely wide and open heart. He or she will love you more than
-            anybody else in the world, you will see!
-          </p>
-          <div class="notOnlyButton hoveredButton">
-            <a href="#friendsSection" class="notOnlyButtonAnchor PinButton"
-              ><p>Make a friend</p></a
-            >
+      <div class="notOnlyContentWrapper">
+        <div class="notOnlyContent">
+          <div class="notOnlyText">
+            <h2 class="notOnlySubtitleH2">
+              Not only people <br />
+              need a house
+            </h2>
+            <p class="notOnlyP">
+              We offer to give a chance to a little and nice puppy with an
+              extremely wide and open heart. He or she will love you more than
+              anybody else in the world, you will see!
+            </p>
+            <div class="notOnlyButton hoveredButton">
+              <a href="#friendsSection" class="notOnlyButtonAnchor PinButton"
+                ><p>Make a friend</p></a
+              >
+            </div>
           </div>
-        </div>
-        <div class="notOnlyImageDiv">
-          <img
-            src="../assets/images/start-screen-puppy.png"
-            alt="PuppyImg"
-            class="notOnlyImage"
-          />
+          <div class="notOnlyImageDiv">
+            <img
+              src="../assets/images/start-screen-puppy.png"
+              alt="PuppyImg"
+              class="notOnlyImage"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -100,7 +102,11 @@
           are looking for a house
         </h2>
         <article class="articleKatrine friendsflex petArticleHover">
-          <img src="../assets/images/pets-katrine.png" alt="friendPet" class="katherineImg"/>
+          <img
+            src="../assets/images/pets-katrine.png"
+            alt="friendPet"
+            class="katherineImg"
+          />
           <h4 class="friendsPetName">Katrine</h4>
           <div class="friendsPetButton hoveredButton">
             <a href="#" class="PinButton">Learn more</a>
@@ -163,11 +169,7 @@
           </div>
           <div class="iconsAndTexts bowlsAndCups hovered">
             <div class="helpImage">
-              <img
-                src="../assets/icons/bowls-and-cups.png"
-                alt="helpIcons"
-                class="bowlsAndCups"
-              />
+              <img src="../assets/icons/bowls-and-cups.png" alt="helpIcons" />
             </div>
             <h3 class="helpH3">Bowls and cups</h3>
           </div>
@@ -199,7 +201,9 @@
             <h3 class="helpH3">Collars / leashes</h3>
           </div>
           <div class="iconsAndTexts sleepingAreas hovered">
-            <img src="../assets/icons/sleeping-area.png" alt="helpIcons" />
+            <div class="helpImage">
+              <img src="../assets/icons/sleeping-area.png" alt="helpIcons" />
+            </div>
             <h3 class="helpH3">Sleeping areas</h3>
           </div>
         </div>
@@ -209,7 +213,11 @@
     <section class="donationSection allSections" id="donationSection">
       <article class="donationContent">
         <div class="donationDogImg">
-          <img src="../assets/images/donation-dog.png" alt="donationDog" class="donationDogImg1"/>
+          <img
+            src="../assets/images/donation-dog.png"
+            alt="donationDog"
+            class="donationDogImg1"
+          />
         </div>
         <article class="donationText">
           <h3 class="donationH3">
@@ -246,7 +254,8 @@
             and suggestions
           </h3>
           <h3 class="footerH3320">
-            For questions and <br /> suggestions
+            For questions and <br />
+            suggestions
           </h3>
           <div class="email forIconsFlex hovered">
             <a
@@ -297,7 +306,8 @@
                 class="pinIcon"
                 alt="pinIcon"
               />
-              <p class="footerP locP">1 Central Street, Boston <br />(entrance from the store)
+              <p class="footerP locP">
+                1 Central Street, Boston <br />(entrance from the store)
               </p>
             </a>
           </div>
@@ -321,5 +331,7 @@
         </div>
       </footer>
     </section>
+    <script type="module" src="./createElement/createElement.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

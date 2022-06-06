@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 767px) and (max-width: 1279px) {
   .notOnlySection {
     background-image: url(../assets/images/responsive-start-screen-gradient-background.png);
     position: relative;
@@ -77,7 +77,9 @@
     justify-items: center;
     align-items: center;
   }
-  .toys, .vitamins, .sleepingAreas {
+  .toys,
+  .vitamins,
+  .sleepingAreas {
     padding-left: 17%;
   }
   /* DONATION */
@@ -141,8 +143,10 @@
     margin-bottom: 0%;
     margin-right: 7.5%;
   }
+  .burgerMenuDiv {
+    display: none;
+  }
 }
-
 @media (min-width: 320px) and (max-width: 767px) {
   .allSections {
     overflow-x: hidden;
@@ -172,7 +176,7 @@
     line-height: 130%;
     letter-spacing: 0.06em;
     padding-right: 3%;
-}
+  }
   .notOnlyP {
     padding-right: 2%;
   }
@@ -221,7 +225,6 @@
     margin-bottom: 4.2rem;
     padding-left: 3%;
     gap: 2.3rem;
-
   }
 
   .aboutSubtitleH2 {
@@ -306,11 +309,13 @@
   .helpSection {
     height: 74.5rem;
     padding: 0rem 1.5rem 0rem 1.5rem;
+    display: flex;
+    justify-content: center;
   }
   .helpContent {
     margin: 0;
     padding: 0;
-    column-gap: 3rem;
+    column-gap: 4rem;
     row-gap: 3rem;
     justify-content: space-between;
     padding-left: 4rem;
@@ -334,32 +339,18 @@
     line-height: 110%;
     letter-spacing: 0.06em;
   }
-   .helpImage {
+  .helpImage {
     width: 5rem;
     height: 5rem;
   }
-  .iconsAndTexts {
-    gap: 2rem;
+  .sleepingAreas {
+    margin-left: -4%
   }
-  .vitamins{
-    margin-right: 12%;
-  }
-  .petFood{
-    margin-left: -2%;
-    margin-top: -2%;
-  }
-  .shampoos, .medicines{
-    margin-left: -5%;
-    margin-top: -1%;
-  }
-  .sleepingAreas{
-    margin-left: -12%;
-    margin-top: -4%;
-  }
-  .transportation , .bowlsAndCups{
+  .transportation,
+  .bowlsAndCups {
     margin-right: 3%;
     margin-top: -1%;
-  } 
+  }
   /* DONATION */
   .donationSection {
     padding: 0rem 1rem 4.2rem 1rem;
@@ -404,17 +395,16 @@
     margin-left: 5%;
     margin-right: 6%;
     margin-top: 13%;
-}
-.donationImg {
-  margin: 0.5rem 0rem 0rem 2.5rem;
-}
+  }
+  .donationImg {
+    margin: 0.5rem 0rem 0rem 2.5rem;
+  }
   /* FOOTER */
   .footerSection {
     height: 80.9rem;
     background-size: cover;
     padding: 0rem 1rem 0rem 1rem;
     align-items: flex-start;
-
   }
   .footer {
     flex-direction: column;
@@ -431,30 +421,29 @@
     text-align: center;
     letter-spacing: 0.06em;
   }
-  .footerH3320{
-    font-family: 'Georgia';
+  .footerH3320 {
+    font-family: "Georgia";
     font-size: 2.5rem;
     line-height: 3.25rem;
     color: white;
     display: block;
   }
-  .footerContacts{
+  .footerContacts {
     gap: 3rem;
     padding-top: 9.5%;
   }
-  .footerForVisit{
+  .footerForVisit {
     gap: 1.7rem;
     padding-top: 8%;
-
   }
-  .tel{
+  .tel {
     padding-left: 1.5%;
     padding-top: 1%;
   }
-  .email{
+  .email {
     padding-top: 4%;
   }
-  .emailP{
+  .emailP {
     padding-bottom: 3%;
   }
   .footerImage {
@@ -463,12 +452,118 @@
     padding-left: 6%;
     padding-right: 6%;
   }
-  .locP{
+  .locP {
     padding-top: 7.4%;
-
   }
-  .locP2{
+  .locP2 {
     padding-top: 9%;
+  }
+  /* OTHER */
+  .headerinB {
+    padding: 3rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15.8rem;
+  }
+  .notOnlyLogoinB {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .notOnlySectionCovered {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    justify-content: flex-end;
+  }
+  .burgerMenuDiv {
+    display: inline;
+    height: 82.3rem;
+    width: 32rem;
+    background-color: #292929;
+    z-index: 1;
+    position: absolute;
+    top: 0rem;
+    right: -100%;
+    animation: slide-in 0.1s forwards;
+    animation-delay: 0.3s;
+  }
 
+  @-webkit-keyframes slide-in {
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes slide-in {
+    100% {
+      right: 0;
+    }
+  }
+  .logoAndBurger {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5.7rem;
+  }
+  .notOnlyUlinB {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 4.3rem;
+  }
+  .removeHeader {
+    display: none;
+  }
+  .rotate {
+    transform: rotate(90deg);
+  }
+  .notOnlyAnchorinB {
+    font-family: "Arial";
+    font-size: 3.2rem;
+    line-height: 160%;
+    color: #fafafa;
+    text-align: center;
+  }
+  .navInB {
+    align-self: center;
   }
 }
+
+  @media (min-width: 320px) and (max-width: 420px) {
+    .helpSection {
+      height: 74.5rem;
+      padding: 0rem 1.5rem 0rem 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+  }
+    .iconsAndTexts {
+      gap: 2rem;
+    }
+    .vitamins{
+      margin-right: 12%;
+    }
+    .petFood{
+      margin-left: -2%;
+      margin-top: -2%;
+    }
+    .shampoos, .medicines{
+      margin-left: -5%;
+      margin-top: -1%;
+    }
+    .sleepingAreas{
+      margin-left: -12%;
+      margin-top: -4%;
+    }
+    .transportation , .bowlsAndCups{
+      margin-right: 3%;
+      margin-top: -1%;
+    } 
+  }

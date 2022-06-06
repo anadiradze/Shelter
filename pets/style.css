@@ -315,7 +315,7 @@ img {
 .footerH3320 {
   display: none;
 }
-.mainH3360{
+.mainH3360 {
   display: none;
 }
 
@@ -409,7 +409,7 @@ img {
     padding: 4.2rem 1rem 0rem 1rem;
   }
   .ourPets {
-    padding:0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     row-gap: 6rem;
@@ -435,7 +435,6 @@ img {
   .icons {
     gap: 1rem;
     padding-top: 11%;
-
   }
   /* FONTS */
   .mainH3 {
@@ -452,7 +451,6 @@ img {
     background-size: cover;
     padding: 0rem 1rem 0rem 1rem;
     align-items: flex-start;
-
   }
   .footer {
     flex-direction: column;
@@ -469,30 +467,29 @@ img {
     text-align: center;
     letter-spacing: 0.06em;
   }
-  .footerH3320{
-    font-family: 'Georgia';
+  .footerH3320 {
+    font-family: "Georgia";
     font-size: 2.5rem;
     line-height: 3.25rem;
     color: white;
     display: block;
   }
-  .footerContacts{
+  .footerContacts {
     gap: 3rem;
     padding-top: 9.5%;
   }
-  .footerForVisit{
+  .footerForVisit {
     gap: 1.7rem;
     padding-top: 8%;
-
   }
-  .tel{
+  .tel {
     padding-left: 1.5%;
     padding-top: 1%;
   }
-  .email{
+  .email {
     padding-top: 4%;
   }
-  .emailP{
+  .emailP {
     padding-bottom: 3%;
   }
   .footerImage {
@@ -501,15 +498,89 @@ img {
     padding-left: 6%;
     padding-right: 6%;
   }
-  .locP{
+  .locP {
     padding-top: 7.4%;
-
   }
-  .locP2{
+  .locP2 {
     padding-top: 9%;
-
   }
-  .pinIcon{
+  .pinIcon {
     padding-top: 8%;
+  }
+  /* OTHER */
+  .headerinB {
+    padding: 3rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15.8rem;
+  }
+  .notOnlyLogoinB {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .notOnlySectionCovered1 {
+    position: relative;
+  }
+  .burgerMenuDiv {
+    display: inline;
+    height: 82.3rem;
+    width: 32rem;
+    background-color: #292929;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+  }
+  .logoAndBurger {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5.7rem;
+  }
+  .notOnlyUlinB {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 4.3rem;
+  }
+  .removeHeader {
+    display: none;
+  }
+  .rotate {
+    transform: rotate(90deg);
+  }
+  .notOnlyAnchorinB {
+    font-family: "Arial";
+    font-size: 3.2rem;
+    line-height: 160%;
+    color: #fafafa;
+    text-align: center;
+  }
+  .navInB {
+    align-self: center;
+  }
+  .notOnlyH1inPets {
+    color: #f1cdb3;
+    font-family: "Georgia";
+    font-size: 3.2rem;
+    line-height: 3.52rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  .notOnlySubtitleH6 {
+    color: #ffffff;
+    font-family: "Arial";
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
   }
 }
