@@ -121,6 +121,7 @@ function createHeaderAndNav() {
     href: "#footer",
   });
 }
+
 const notOnlyContentWrapper = document.querySelector(".notOnlyContentWrapper");
 burgerIcon.addEventListener("click", (e) => {
   const removeEl = (e) => {
@@ -137,12 +138,29 @@ burgerIcon.addEventListener("click", (e) => {
 
   headerinMain.classList.add("removeHeader");
   const BurgerIconinB = document.querySelector(".rotate");
-  const burgerMenuDiv = document.querySelectorAll("#burgerMenuDiv");
   BurgerIconinB.addEventListener("click", removeEl);
   BurgerIconinB.addEventListener("click", () => {
     notOnlySection.classList.remove("notOnlySectionCovered");
     enableScroll();
   });
+  const burgerMenuDiv = document.querySelector("#burgerMenuDiv");
+
+  function removeDivWhenonDarkenedArea() {
+    window.addEventListener("mouseup", function (event) {
+      if (burgerMenuDiv != null) {
+        if (
+          event.target != burgerMenuDiv &&
+          event.target.parentNode != burgerMenuDiv
+        ) {
+          burgerMenuDiv.remove();
+          headerinMain.classList.remove("removeHeader");
+          notOnlySection.classList.remove("notOnlySectionCovered");
+          enableScroll() 
+        }
+      }
+    });
+  }
+  removeDivWhenonDarkenedArea();
 
   const Li3 = document.querySelector(".Li3");
   Li3.addEventListener("click", (e) => {

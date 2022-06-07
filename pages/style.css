@@ -519,6 +519,9 @@ img {
 .footerH3320 {
   display: none;
 }
+.popupMainRemoval{
+  display: none;
+}
 /* POPUP */
 .popupSection {
   display: flex;
