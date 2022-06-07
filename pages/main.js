@@ -173,25 +173,47 @@ fetch("../pets.json")
     console.log(data);
     createSlider(data);
   });
-let count = 0;
+
 const arrowRight = document.querySelector(".arrowRight");
+const arrowLeft = document.querySelector(".arrowLeft");
 
 function createSlider(data) {
+  const friendElements = document.querySelectorAll(".friendsflex");
+  const friendsImage = document.querySelectorAll("#friendsImage");
+  const friendsName = document.querySelectorAll("#friendsName");
+  const LearnMore = document.querySelectorAll("#LearnMore");
+  //ARROW RIGHT
+  let count = 0;
   arrowRight.addEventListener("click", () => {
-    const friendElements = document.querySelectorAll(".friendsflex");
-    const friendsImage = document.querySelectorAll("#friendsImage");
-    const friendsName = document.querySelectorAll("#friendsName");
-    const LearnMore = document.querySelectorAll("#LearnMore");
-
     for (let i = 0; i < 2; i++) {
       friendsName[i].textContent = friendsName[i + 1].textContent;
-      friendsImage[i].setAttribute("src", friendsImage[i + 1].attributes.src.nodeValue);
+      friendsImage[i].setAttribute(
+        "src",
+        friendsImage[i + 1].attributes.src.nodeValue
+      );
     }
     friendsName[2].textContent = data[count].name;
-    friendsImage[2].setAttribute("src", data[count].img)
-    console.log(data[count].img)
-    count++
+    friendsImage[2].setAttribute("src", data[count].img);
+    count++;
     if (count > 7) {
+      count = 0;
+    }
+  });
+
+  //ARROW LEFT
+  console.log(count)
+  arrowLeft.addEventListener("click", () => {
+    for (let i = 2; i >= 1; i--) {
+      friendsName[i].textContent = friendsName[i - 1].textContent;
+      friendsImage[i].setAttribute(
+        "src",
+        friendsImage[i - 1].attributes.src.nodeValue
+      );
+    }
+    friendsName[0].textContent = data[count].name;
+    friendsImage[0].setAttribute("src", data[count].img);
+    count++;
+    if (count>7) {
       count = 0;
     }
   });
