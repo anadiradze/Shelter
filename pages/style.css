@@ -73,7 +73,7 @@ a {
   text-align: center;
   gap: 1rem;
 }
-.burger{
+.burger {
   display: none;
 }
 .notOnlyH1 {
@@ -139,7 +139,7 @@ a {
   justify-content: center;
   gap: 4.2rem;
   margin-top: 6rem;
-  padding-left:1.3%;
+  padding-left: 1.3%;
 }
 .notOnlyText {
   display: flex;
@@ -187,8 +187,7 @@ a {
   align-items: center;
   column-gap: 12rem;
   margin: 8rem 4rem 10rem 4rem;
-  padding-left:1.3%;
-
+  padding-left: 1.3%;
 }
 .aboutText {
   display: flex;
@@ -274,7 +273,6 @@ a {
   grid-row: 2;
   grid-column: 2;
   padding-right: 7.5%;
-
 }
 .articleJennifer {
   grid-row: 2;
@@ -342,7 +340,7 @@ a {
   align-items: center;
 }
 .helpH2Wrapper {
-max-width: 30.8rem;
+  max-width: 30.8rem;
   min-height: 9rem;
 }
 .helpH2 {
@@ -382,7 +380,6 @@ max-width: 30.8rem;
   letter-spacing: 0.06em;
   color: #545454;
   white-space: nowrap;
-
 }
 /* DONATION SECTION */
 .donationSection {
@@ -456,7 +453,7 @@ max-width: 30.8rem;
 .donationImg {
   margin: 1rem 1.5rem 1rem 1.5rem;
 }
-.donationDogImg{
+.donationDogImg {
   margin-left: 2.2%;
 }
 /* FOOTER SECTION */
@@ -483,7 +480,6 @@ max-width: 30.8rem;
 .footerContacts {
   gap: 4rem;
   margin-bottom: 3%;
-  
 }
 .footerForVisit {
   gap: 3.4rem;
@@ -520,8 +516,90 @@ img {
   width: 6rem;
   height: 6rem;
 }
-.footerH3320{
+.footerH3320 {
   display: none;
 }
+/* POPUP */
+.popupSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 877px;
+  width: 1280px;
+  background: rgba(41, 41, 41, 0.6);
+  z-index: 1;
+  top: -97%;
+}
+.popupMain {
+  width: 90rem;
+  height: 50rem;
+  background-color: #fafafa;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 2rem;
+}
+.popupContainer {
+  position: relative;
+}
+.popupCloseBtn {
+  position: absolute;
+  top: -11%;
+  left: 100%;
+}
+.popupImg {
+  height: 100%;
+}
+.popupArticle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  margin: 5rem 2rem 8.8rem 2.9rem;
+  width: 35.1rem;
+  height: 36.2rem;
+}
+.parentHeadings{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.popupH3 {
+  font-family: "Georgia";
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.popupH4 {
+  font-family: "Georgia";
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.popupH5 {
+  font-family: "Georgia";
+  font-size: 1.3rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.articleH6{
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.popupH6{
+font-family: 'Georgia';
+font-weight: 700;
+font-size: 1.5rem;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: #000000;
+display: inline-flex;
+}
+/* .h6_1span, .h6_2span, .h6_3span, .h6_4span{
+  display: inline-flex;
 
-
+} */

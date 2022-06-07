@@ -166,7 +166,6 @@ fetch("../pets.json")
     return response.json();
   })
   .then((data) => {
-    console.log(data);
     createSlider(data);
   });
 
@@ -174,7 +173,6 @@ const arrowRight = document.querySelector(".arrowRight");
 const arrowLeft = document.querySelector(".arrowLeft");
 
 function createSlider(data) {
-  const friendElements = document.querySelectorAll(".friendsflex");
   const friendsImage = document.querySelectorAll("#friendsImage");
   const friendsName = document.querySelectorAll("#friendsName");
   const LearnMore = document.querySelectorAll("#LearnMore");

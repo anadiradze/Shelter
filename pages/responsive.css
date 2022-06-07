@@ -344,7 +344,7 @@
     height: 5rem;
   }
   .sleepingAreas {
-    margin-left: -4%
+    margin-left: -4%;
   }
   .transportation,
   .bowlsAndCups {
@@ -537,33 +537,35 @@
   }
 }
 
-  @media (min-width: 320px) and (max-width: 420px) {
-    .helpSection {
-      height: 74.5rem;
-      padding: 0rem 1.5rem 0rem 1.5rem;
-      display: flex;
-      justify-content: flex-start;
+@media (min-width: 320px) and (max-width: 420px) {
+  .helpSection {
+    height: 74.5rem;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    display: flex;
+    justify-content: flex-start;
   }
-    .iconsAndTexts {
-      gap: 2rem;
-    }
-    .vitamins{
-      margin-right: 12%;
-    }
-    .petFood{
-      margin-left: -2%;
-      margin-top: -2%;
-    }
-    .shampoos, .medicines{
-      margin-left: -5%;
-      margin-top: -1%;
-    }
-    .sleepingAreas{
-      margin-left: -12%;
-      margin-top: -4%;
-    }
-    .transportation , .bowlsAndCups{
-      margin-right: 3%;
-      margin-top: -1%;
-    } 
+  .iconsAndTexts {
+    gap: 2rem;
   }
+  .vitamins {
+    margin-right: 12%;
+  }
+  .petFood {
+    margin-left: -2%;
+    margin-top: -2%;
+  }
+  .shampoos,
+  .medicines {
+    margin-left: -5%;
+    margin-top: -1%;
+  }
+  .sleepingAreas {
+    margin-left: -12%;
+    margin-top: -4%;
+  }
+  .transportation,
+  .bowlsAndCups {
+    margin-right: 3%;
+    margin-top: -1%;
+  }
+}
