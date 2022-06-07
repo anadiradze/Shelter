@@ -146,9 +146,7 @@ burgerIcon.addEventListener("click", (e) => {
 
   const Li3 = document.querySelector(".Li3");
   Li3.addEventListener("click", (e) => {
-    console.log(
-      e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
-    );
+    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     headerinMain.classList.remove("removeHeader");
     notOnlySection.classList.remove("notOnlySectionCovered");
     enableScroll();
@@ -156,9 +154,7 @@ burgerIcon.addEventListener("click", (e) => {
 
   const Li4 = document.querySelector(".Li4");
   Li4.addEventListener("click", (e) => {
-    console.log(
-      e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
-    );
+    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     headerinMain.classList.remove("removeHeader");
     notOnlySection.classList.remove("notOnlySectionCovered");
     enableScroll();
@@ -182,39 +178,98 @@ function createSlider(data) {
   const friendsImage = document.querySelectorAll("#friendsImage");
   const friendsName = document.querySelectorAll("#friendsName");
   const LearnMore = document.querySelectorAll("#LearnMore");
-  //ARROW RIGHT
-  let count = 0;
-  arrowRight.addEventListener("click", () => {
-    for (let i = 0; i < 2; i++) {
-      friendsName[i].textContent = friendsName[i + 1].textContent;
-      friendsImage[i].setAttribute(
-        "src",
-        friendsImage[i + 1].attributes.src.nodeValue
-      );
-    }
-    friendsName[2].textContent = data[count].name;
-    friendsImage[2].setAttribute("src", data[count].img);
-    count++;
-    if (count > 7) {
-      count = 0;
-    }
-  });
+  if (window.screen.availWidth >= 1280) {
+    //ARROW RIGHT 1280
+    let count = 0;
+    arrowRight.addEventListener("click", () => {
+      for (let i = 0; i < 2; i++) {
+        friendsName[i].textContent = friendsName[i + 1].textContent;
+        friendsImage[i].setAttribute(
+          "src",
+          friendsImage[i + 1].attributes.src.nodeValue
+        );
+      }
+      friendsName[2].textContent = data[count].name;
+      friendsImage[2].setAttribute("src", data[count].img);
+      count++;
+      if (count > 7) {
+        count = 0;
+      }
+    });
 
-  //ARROW LEFT
-  console.log(count)
-  arrowLeft.addEventListener("click", () => {
-    for (let i = 2; i >= 1; i--) {
-      friendsName[i].textContent = friendsName[i - 1].textContent;
-      friendsImage[i].setAttribute(
-        "src",
-        friendsImage[i - 1].attributes.src.nodeValue
-      );
-    }
-    friendsName[0].textContent = data[count].name;
-    friendsImage[0].setAttribute("src", data[count].img);
-    count++;
-    if (count>7) {
-      count = 0;
-    }
-  });
+    //ARROW LEFT 1280
+    arrowLeft.addEventListener("click", () => {
+      for (let i = 2; i >= 1; i--) {
+        friendsName[i].textContent = friendsName[i - 1].textContent;
+        friendsImage[i].setAttribute(
+          "src",
+          friendsImage[i - 1].attributes.src.nodeValue
+        );
+      }
+      friendsName[0].textContent = data[count].name;
+      friendsImage[0].setAttribute("src", data[count].img);
+      count++;
+      if (count > 7) {
+        count = 0;
+      }
+    });
+  }
+  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
+    //ARROW RIGHT >= 768
+    let count = 0;
+    arrowRight.addEventListener("click", () => {
+      for (let i = 0; i <= 1; i++) {
+        friendsName[i].textContent = friendsName[i + 1].textContent;
+        friendsImage[i].setAttribute(
+          "src",
+          friendsImage[i + 1].attributes.src.nodeValue
+        );
+      }
+      friendsName[1].textContent = data[count].name;
+      friendsImage[1].setAttribute("src", data[count].img);
+      count++;
+      if (count > 7) {
+        count = 0;
+      }
+    });
+
+    //ARROW LEFT >= 768
+    arrowLeft.addEventListener("click", () => {
+      for (let i = 1; i > 0; i--) {
+        console.log(i);
+        friendsName[i].textContent = friendsName[i - 1].textContent;
+        friendsImage[i].setAttribute(
+          "src",
+          friendsImage[i - 1].attributes.src.nodeValue
+        );
+      }
+      friendsName[0].textContent = data[count].name;
+      friendsImage[0].setAttribute("src", data[count].img);
+      count++;
+      if (count > 7) {
+        count = 0;
+      }
+    });
+  }
+  if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
+    let count = 0;
+    // ARROW RIGHT  >= 320
+    arrowRight.addEventListener("click", () => {
+      friendsName[0].textContent = data[count].name;
+      friendsImage[0].setAttribute("src", data[count].img);
+      count++;
+      if (count > 7) {
+        count = 0;
+      }
+    });
+    // ARROW LEFT  >= 320
+    arrowLeft.addEventListener("click", () => {
+      friendsName[0].textContent = data[count].name;
+      friendsImage[0].setAttribute("src", data[count].img);
+      count++;
+      if (count > 7) {
+        count = 0;
+      }
+    });
+  }
 }
