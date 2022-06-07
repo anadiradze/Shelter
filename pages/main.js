@@ -5,7 +5,7 @@ const headerinMain = document.querySelector("#headerinMain");
 
 function disableScroll() {
   window.onscroll = function () {
-    window.scrollTo(window.pageYOffset, window.pageXOffset);
+    window.scrollTo(window.scrollX, window.scrollY);
   };
 }
 function enableScroll() {
@@ -155,7 +155,7 @@ burgerIcon.addEventListener("click", (e) => {
           burgerMenuDiv.remove();
           headerinMain.classList.remove("removeHeader");
           notOnlySection.classList.remove("notOnlySectionCovered");
-          enableScroll() 
+          enableScroll();
         }
       }
     });
@@ -289,3 +289,5 @@ function createSlider(data) {
     });
   }
 }
+
+export { disableScroll, enableScroll };

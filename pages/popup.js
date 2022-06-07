@@ -1,4 +1,5 @@
 import createElement from "./createElement/createElement.js";
+import { enableScroll } from "./main.js";
 const friendElements = document.querySelectorAll(".friendsflex");
 const friendsSection = document.querySelector("#friendsSection");
 
@@ -151,6 +152,7 @@ fetch("../pets.json")
   .then((data) => {
     for (let i = 0; i < friendElements.length; i++) {
       friendElements[i].addEventListener("click", (e) => {
+        disableScrollAccordingToWidth();
         function isName(obj) {
           return obj.name === `${friendElements[i].children[1].textContent}`;
         }
@@ -187,17 +189,37 @@ function removeDivWhenPressingX() {
   popupCloseBtn.addEventListener("click", removeSection);
   function removeSection() {
     popupSection.remove();
+    enableScroll();
   }
 }
 
 function removeDivWhenonDarkenedArea() {
   window.addEventListener("mouseup", function (event) {
-    let box = document.querySelector("#popupMain")
+    let box = document.querySelector("#popupMain");
     const popupSection = document.getElementById("popupSection");
-    if(popupSection != null){
+    if (popupSection != null) {
       if (event.target != box && event.target.parentNode != box) {
         popupSection.remove();
+        enableScroll();
       }
     }
   });
+}
+
+function disableScrollAccordingToWidth() {
+  if (window.screen.availWidth >= 1280) {
+    window.onscroll = function () {
+      window.scrollTo(0, 1450);
+    };
+  }
+  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
+    window.onscroll = function () {
+      window.scrollTo(0, 2300);
+    };
+  }
+  if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
+    window.onscroll = function () {
+      window.scrollTo(0, 1880);
+    };
+  }
 }
