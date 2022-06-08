@@ -2,7 +2,6 @@ import createElement from "./createElement/createElement.js";
 const burgerIcon = document.querySelector("#burger");
 const notOnlySection = document.querySelector("#notOnlySection");
 const headerinMain = document.querySelector("#headerinMain");
-alert("I have not finished the task yet, please check it in several hours")
 function disableScroll() {
   window.onscroll = function () {
     window.scrollTo(window.scrollX, window.scrollY);
