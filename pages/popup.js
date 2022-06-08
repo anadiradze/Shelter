@@ -152,7 +152,7 @@ fetch("../pets.json")
   .then((data) => {
     for (let i = 0; i < friendElements.length; i++) {
       friendElements[i].addEventListener("click", (e) => {
-        disableScrollAccordingToWidth();
+        //disableScrollAccordingToWidth();
         function isName(obj) {
           return obj.name === `${friendElements[i].children[1].textContent}`;
         }
@@ -183,7 +183,7 @@ fetch("../pets.json")
     }
   });
 
-function removeDivWhenPressingX() {
+ function removeDivWhenPressingX() {
   const popupCloseBtn = document.querySelector(".popupCloseBtn");
   const popupSection = document.querySelector("#popupSection");
   popupCloseBtn.addEventListener("click", removeSection);
@@ -192,7 +192,7 @@ function removeDivWhenPressingX() {
     enableScroll();
   }
 }
-
+ 
 function removeDivWhenonDarkenedArea() {
   window.addEventListener("mouseup", function (event) {
     let box = document.querySelector("#popupMain");
@@ -206,7 +206,7 @@ function removeDivWhenonDarkenedArea() {
   });
 }
 
-function disableScrollAccordingToWidth() {
+/* function disableScrollAccordingToWidth() {
   if (window.screen.availWidth >= 1280) {
     window.onscroll = function () {
       window.scrollTo(0, 1450);
@@ -222,4 +222,5 @@ function disableScrollAccordingToWidth() {
       window.scrollTo(0, 1880);
     };
   }
-}
+} */
+
