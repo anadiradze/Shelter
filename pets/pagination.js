@@ -1,3 +1,4 @@
+const friendsflex = document.querySelectorAll(".friendsflex");
 const doubleLeft = document.querySelector(".doubleLeft");
 const arrowLeft = document.querySelector(".arrowLeft");
 const innerMiddle = document.querySelector(".innerMiddle");
@@ -9,7 +10,7 @@ fetch("../pets.json")
     return response.json();
   })
   .then((data) => {
-    addEvents(data)
+    addEvents(data);
   });
 
 // RAND CARDS
@@ -25,14 +26,13 @@ function generateRandCards(data) {
     nums.splice(randomNumber, 1);
   }
 
-  const friendsflex = document.querySelectorAll(".friendsflex");
-
   for (let i = 0; i < 8; i++) {
     friendsflex[pushRandNumbersInThisArr[i]].children[0].setAttribute(
       "src",
       data[i].img
     );
   }
+
   for (let j = 7; j > -1; j--) {
     if (j < 6) {
       friendsflex[pushRandNumbersInThisArr[j]].children[1].textContent =
@@ -44,105 +44,62 @@ function generateRandCards(data) {
   }
 }
 
+// UNIVERSAL DISABLE/ENABLE
+function disabled(arrow) {
+  arrow.disabled = true;
+  arrow.classList.add("innerArrow");
+  arrow.classList.remove("innerbg");
+}
+function enabled(arrow) {
+  arrow.disabled = false;
+  arrow.classList.remove("innerArrow");
+  arrow.classList.add("innerbg");
+}
+
+// DISABLE/ENABLE ARROWS
 function inArrowRight_2to6() {
   // when page = 2,3,4,5,6
   innerMiddle.textContent = Number(innerMiddle.textContent) + 1;
-
-  arrowLeft.disabled = false;
-  arrowLeft.classList.add("innerbg");
-  arrowLeft.classList.remove("innerArrow");
-
-  arrowRight.disabled = false;
-  arrowRight.classList.add("innerbg");
-  arrowRight.classList.remove("innerArrow");
-
-  doubleLeft.disabled = false;
-  doubleLeft.classList.add("innerbg");
-  doubleLeft.classList.remove("innerArrow");
+  enabled(arrowLeft);
+  enabled(arrowRight);
+  enabled(doubleLeft);
 }
 function inArrowRight_6() {
   // when page = 6
   innerMiddle.textContent = 6;
-
-  arrowRight.disabled = true;
-  arrowRight.classList.add("innerArrow");
-  arrowRight.classList.remove("innerbg");
-
-  arrowLeft.disabled = false;
-  arrowLeft.classList.add("innerbg");
-  arrowLeft.classList.remove("innerArrow");
-
-  doubleRight.disabled = true;
-  doubleRight.classList.add("innerArrow");
-  doubleRight.classList.remove("innerbg");
+  disabled(arrowRight);
+  enabled(arrowLeft);
+  disabled(doubleRight);
 }
-
 function inArrowLeft_2to6() {
   // when page = 2,3,4,5,6
   innerMiddle.textContent = Number(innerMiddle.textContent) - 1;
-
-  arrowLeft.disabled = false;
-  arrowLeft.classList.add("innerbg");
-  arrowLeft.classList.remove("innerArrow");
-
-  arrowRight.disabled = false;
-  arrowRight.classList.add("innerbg");
-  arrowRight.classList.remove("innerArrow");
-
-  doubleRight.disabled = false;
-  doubleRight.classList.add("innerbg");
-  doubleRight.classList.remove("innerArrow");
+  enabled(arrowLeft);
+  enabled(arrowRight);
+  enabled(doubleRight);
 }
 function InArrowLeft_1() {
   // when page = 1
   innerMiddle.textContent = 1;
-
-  arrowLeft.disabled = true;
-  arrowLeft.classList.add("innerArrow");
-  arrowLeft.classList.remove("innerbg");
-
-  doubleLeft.disabled = true;
-  doubleLeft.classList.add("innerArrow");
-  doubleLeft.classList.remove("innerbg");
+  disabled(arrowLeft);
+  disabled(doubleLeft);
 }
 function indoubleRight_1to6() {
   innerMiddle.textContent = 6;
-  doubleRight.disabled = true;
-  doubleRight.classList.add("innerArrow");
-  doubleRight.classList.remove("innerbg");
-
-  arrowRight.disabled = true;
-  arrowRight.classList.add("innerArrow");
-  arrowRight.classList.remove("innerbg");
-
-  arrowLeft.disabled = false;
-  arrowLeft.classList.add("innerbg");
-  arrowLeft.classList.remove("innerArrow");
-
-  doubleLeft.disabled = false;
-  doubleLeft.classList.add("innerbg");
-  doubleLeft.classList.remove("innerArrow");
+  disabled(doubleRight);
+  disabled(arrowRight);
+  enabled(arrowLeft);
+  enabled(doubleLeft);
 }
-
 function indoubleLeft_1to6() {
   innerMiddle.textContent = 1;
-  doubleLeft.disabled = true;
-  doubleLeft.classList.add("innerArrow");
-  doubleLeft.classList.remove("innerbg");
-
-  arrowLeft.disabled = true;
-  arrowLeft.classList.add("innerArrow");
-  arrowLeft.classList.remove("innerbg");
-
-  arrowRight.disabled = false;
-  arrowRight.classList.add("innerbg");
-  arrowRight.classList.remove("innerArrow");
-
-  doubleRight.disabled = false;
-  doubleRight.classList.add("innerbg");
-  doubleRight.classList.remove("innerArrow");
+  disabled(doubleLeft);
+  disabled(arrowLeft);
+  enabled(arrowRight);
+  enabled(doubleRight);
 }
 
+// EVENTS
 function addEvents(data) {
   arrowRight.addEventListener("click", () => {
     if (innerMiddle.textContent > 0 && innerMiddle.textContent < 5) {
@@ -163,12 +120,14 @@ function addEvents(data) {
       generateRandCards(data);
     }
   });
+
   doubleRight.addEventListener("click", () => {
     if (innerMiddle.textContent !== 6) {
       indoubleRight_1to6();
       generateRandCards(data);
     }
   });
+  
   doubleLeft.addEventListener("click", () => {
     if (innerMiddle.textContent !== 1) {
       indoubleLeft_1to6();
