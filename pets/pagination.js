@@ -11,20 +11,35 @@ fetch("../pets.json")
 
   .then((data) => {
     arrowRight.addEventListener("click", () => {
-      if (innerMiddle.textContent < 6) {
+      if (innerMiddle.textContent > 0 && innerMiddle.textContent < 5) {
         inArrowRight_2to6();
         generateRandCards(data);
       } else {
         inArrowRight_6();
+        generateRandCards(data);
+
       }
     });
 
     arrowLeft.addEventListener("click", () => {
-      if (innerMiddle.textContent > 1 && innerMiddle.textContent < 7) {
+      if (innerMiddle.textContent > 2 && innerMiddle.textContent < 7) {
         inArrowLeft_2to6();
         generateRandCards(data);
       } else {
         InArrowLeft_1();
+        generateRandCards(data);
+      }
+    });
+    doubleRight.addEventListener("click", () => {
+      if (innerMiddle.textContent !== 6) {
+        indoubleRight_1to6();
+        generateRandCards(data);
+      }
+    });
+    doubleLeft.addEventListener("click", () => {
+      if (innerMiddle.textContent !== 1) {
+        indoubleLeft_1to6();
+        generateRandCards(data);
       }
     });
   });
@@ -61,7 +76,8 @@ function generateRandCards(data) {
   }
 }
 
-function inArrowRight_2to6() { // when page = 2,3,4,5,6
+function inArrowRight_2to6() {
+  // when page = 2,3,4,5,6
   innerMiddle.textContent = Number(innerMiddle.textContent) + 1;
 
   arrowLeft.disabled = false;
@@ -71,8 +87,13 @@ function inArrowRight_2to6() { // when page = 2,3,4,5,6
   arrowRight.disabled = false;
   arrowRight.classList.add("innerbg");
   arrowRight.classList.remove("innerArrow");
+
+  doubleLeft.disabled = false;
+  doubleLeft.classList.add("innerbg");
+  doubleLeft.classList.remove("innerArrow");
 }
-function inArrowRight_6() { // when page = 6
+function inArrowRight_6() {
+  // when page = 6
   innerMiddle.textContent = 6;
 
   arrowRight.disabled = true;
@@ -80,9 +101,16 @@ function inArrowRight_6() { // when page = 6
   arrowRight.classList.remove("innerbg");
 
   arrowLeft.disabled = false;
+  arrowLeft.classList.add("innerbg");
+  arrowLeft.classList.remove("innerArrow");
+
+  doubleRight.disabled = true;
+  doubleRight.classList.add("innerArrow");
+  doubleRight.classList.remove("innerbg");
 }
 
-function inArrowLeft_2to6() {  // when page = 2,3,4,5,6
+function inArrowLeft_2to6() {
+  // when page = 2,3,4,5,6
   innerMiddle.textContent = Number(innerMiddle.textContent) - 1;
 
   arrowLeft.disabled = false;
@@ -92,11 +120,57 @@ function inArrowLeft_2to6() {  // when page = 2,3,4,5,6
   arrowRight.disabled = false;
   arrowRight.classList.add("innerbg");
   arrowRight.classList.remove("innerArrow");
+
+  doubleRight.disabled = false;
+  doubleRight.classList.add("innerbg");
+  doubleRight.classList.remove("innerArrow");
 }
-function InArrowLeft_1() { // when page = 1
+function InArrowLeft_1() {
+  // when page = 1
   innerMiddle.textContent = 1;
 
   arrowLeft.disabled = true;
   arrowLeft.classList.add("innerArrow");
   arrowLeft.classList.remove("innerbg");
+
+  doubleLeft.disabled = true;
+  doubleLeft.classList.add("innerArrow");
+  doubleLeft.classList.remove("innerbg");
+}
+function indoubleRight_1to6() {
+  innerMiddle.textContent = 6;
+  doubleRight.disabled = true;
+  doubleRight.classList.add("innerArrow");
+  doubleRight.classList.remove("innerbg");
+
+  arrowRight.disabled = true;
+  arrowRight.classList.add("innerArrow");
+  arrowRight.classList.remove("innerbg");
+
+  arrowLeft.disabled = false;
+  arrowLeft.classList.add("innerbg");
+  arrowLeft.classList.remove("innerArrow");
+
+  doubleLeft.disabled = false;
+  doubleLeft.classList.add("innerbg");
+  doubleLeft.classList.remove("innerArrow");
+}
+
+function indoubleLeft_1to6() {
+  innerMiddle.textContent = 1;
+  doubleLeft.disabled = true;
+  doubleLeft.classList.add("innerArrow");
+  doubleLeft.classList.remove("innerbg");
+
+  arrowLeft.disabled = true;
+  arrowLeft.classList.add("innerArrow");
+  arrowLeft.classList.remove("innerbg");
+
+  arrowRight.disabled = false;
+  arrowRight.classList.add("innerbg");
+  arrowRight.classList.remove("innerArrow");
+
+  doubleRight.disabled = false;
+  doubleRight.classList.add("innerbg");
+  doubleRight.classList.remove("innerArrow");
 }

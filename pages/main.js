@@ -1,4 +1,5 @@
 import createElement from "./createElement/createElement.js";
+alert("in process, please check my task in several hours")
 const burgerIcon = document.querySelector("#burger");
 const notOnlySection = document.querySelector("#notOnlySection");
 const headerinMain = document.querySelector("#headerinMain");
