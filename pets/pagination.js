@@ -10,21 +10,23 @@ fetch("../pets.json")
   })
 
   .then((data) => {
-
     arrowRight.addEventListener("click", () => {
-      inArrowRight();
-      if(innerMiddle.textContent < 6){
-        generateRandCards(data) 
-      }  
+      if (innerMiddle.textContent < 6) {
+        inArrowRight_2to6();
+        generateRandCards(data);
+      } else {
+        inArrowRight_6();
+      }
     });
 
-    /*  arrowLeft.addEventListener("click", () => {
-        inArrowLeft();
-        if(innerMiddle.textContent > 0){
-          generateRandCards(data) 
-        }  
-      });  */
-
+    arrowLeft.addEventListener("click", () => {
+      if (innerMiddle.textContent > 1 && innerMiddle.textContent < 7) {
+        inArrowLeft_2to6();
+        generateRandCards(data);
+      } else {
+        InArrowLeft_1();
+      }
+    });
   });
 
 // RAND CARDS
@@ -42,7 +44,6 @@ function generateRandCards(data) {
 
   const friendsflex = document.querySelectorAll(".friendsflex");
 
-
   for (let i = 0; i < 8; i++) {
     friendsflex[pushRandNumbersInThisArr[i]].children[0].setAttribute(
       "src",
@@ -59,16 +60,43 @@ function generateRandCards(data) {
     }
   }
 }
-function inArrowRight() {
-  innerMiddle.textContent < 6
-    ? (innerMiddle.textContent = Number(innerMiddle.textContent) + 1)
-    : (innerMiddle.textContent = 6);
+
+function inArrowRight_2to6() { // when page = 2,3,4,5,6
+  innerMiddle.textContent = Number(innerMiddle.textContent) + 1;
+
+  arrowLeft.disabled = false;
+  arrowLeft.classList.add("innerbg");
+  arrowLeft.classList.remove("innerArrow");
+
+  arrowRight.disabled = false;
+  arrowRight.classList.add("innerbg");
+  arrowRight.classList.remove("innerArrow");
 }
-/* function inArrowLeft() {
-    arrowLeft.classList.remove("innerArrow")
-    arrowLeft.disabled = false;
-    console.log(arrowLeft)
-    innerMiddle.textContent > 0
-      ? (innerMiddle.textContent = Number(innerMiddle.textContent) -1)
-      : (innerMiddle.textContent = 0);
-  } */
+function inArrowRight_6() { // when page = 6
+  innerMiddle.textContent = 6;
+
+  arrowRight.disabled = true;
+  arrowRight.classList.add("innerArrow");
+  arrowRight.classList.remove("innerbg");
+
+  arrowLeft.disabled = false;
+}
+
+function inArrowLeft_2to6() {  // when page = 2,3,4,5,6
+  innerMiddle.textContent = Number(innerMiddle.textContent) - 1;
+
+  arrowLeft.disabled = false;
+  arrowLeft.classList.add("innerbg");
+  arrowLeft.classList.remove("innerArrow");
+
+  arrowRight.disabled = false;
+  arrowRight.classList.add("innerbg");
+  arrowRight.classList.remove("innerArrow");
+}
+function InArrowLeft_1() { // when page = 1
+  innerMiddle.textContent = 1;
+
+  arrowLeft.disabled = true;
+  arrowLeft.classList.add("innerArrow");
+  arrowLeft.classList.remove("innerbg");
+}
