@@ -8,40 +8,8 @@ fetch("../pets.json")
   .then((response) => {
     return response.json();
   })
-
   .then((data) => {
-    arrowRight.addEventListener("click", () => {
-      if (innerMiddle.textContent > 0 && innerMiddle.textContent < 5) {
-        inArrowRight_2to6();
-        generateRandCards(data);
-      } else {
-        inArrowRight_6();
-        generateRandCards(data);
-
-      }
-    });
-
-    arrowLeft.addEventListener("click", () => {
-      if (innerMiddle.textContent > 2 && innerMiddle.textContent < 7) {
-        inArrowLeft_2to6();
-        generateRandCards(data);
-      } else {
-        InArrowLeft_1();
-        generateRandCards(data);
-      }
-    });
-    doubleRight.addEventListener("click", () => {
-      if (innerMiddle.textContent !== 6) {
-        indoubleRight_1to6();
-        generateRandCards(data);
-      }
-    });
-    doubleLeft.addEventListener("click", () => {
-      if (innerMiddle.textContent !== 1) {
-        indoubleLeft_1to6();
-        generateRandCards(data);
-      }
-    });
+    addEvents(data)
   });
 
 // RAND CARDS
@@ -173,4 +141,38 @@ function indoubleLeft_1to6() {
   doubleRight.disabled = false;
   doubleRight.classList.add("innerbg");
   doubleRight.classList.remove("innerArrow");
+}
+
+function addEvents(data) {
+  arrowRight.addEventListener("click", () => {
+    if (innerMiddle.textContent > 0 && innerMiddle.textContent < 5) {
+      inArrowRight_2to6();
+      generateRandCards(data);
+    } else {
+      inArrowRight_6();
+      generateRandCards(data);
+    }
+  });
+
+  arrowLeft.addEventListener("click", () => {
+    if (innerMiddle.textContent > 2 && innerMiddle.textContent < 7) {
+      inArrowLeft_2to6();
+      generateRandCards(data);
+    } else {
+      InArrowLeft_1();
+      generateRandCards(data);
+    }
+  });
+  doubleRight.addEventListener("click", () => {
+    if (innerMiddle.textContent !== 6) {
+      indoubleRight_1to6();
+      generateRandCards(data);
+    }
+  });
+  doubleLeft.addEventListener("click", () => {
+    if (innerMiddle.textContent !== 1) {
+      indoubleLeft_1to6();
+      generateRandCards(data);
+    }
+  });
 }
