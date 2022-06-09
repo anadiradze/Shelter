@@ -1,5 +1,5 @@
 import createElement from "./createElement/createElement.js";
-alert("in process, please check my task in several hours")
+//alert("in process, please check my task in several hours")
 const burgerIcon = document.querySelector("#burger");
 const notOnlySection = document.querySelector("#notOnlySection");
 const headerinMain = document.querySelector("#headerinMain");
@@ -187,18 +187,21 @@ fetch("../pets.json")
     createSlider(data);
   });
 
-const arrowRight = document.querySelector(".arrowRight");
-const arrowLeft = document.querySelector(".arrowLeft");
+
+const arrowRightM = document.querySelector(".arrowRightMain");
+const arrowLeftM = document.querySelector(".arrowLeftMain");
 
 function createSlider(data) {
   const friendsImage = document.querySelectorAll("#friendsImage");
   const friendsName = document.querySelectorAll("#friendsName");
   const LearnMore = document.querySelectorAll("#LearnMore");
+  if(arrowRightM !== null || arrowLeftM!==null){
+
   if (window.screen.availWidth >= 1280) {
     //ARROW RIGHT 1280
     let count = 0;
-    arrowRight.addEventListener("click", () => {
-      for (let i = 0; i < 2; i++) {
+    arrowRightM.addEventListener("click", () => {
+      for (let i = 0; i < 2; i++) { //0,1
         friendsName[i].textContent = friendsName[i + 1].textContent;
         friendsImage[i].setAttribute(
           "src",
@@ -214,7 +217,7 @@ function createSlider(data) {
     });
 
     //ARROW LEFT 1280
-    arrowLeft.addEventListener("click", () => {
+    arrowLeftM.addEventListener("click", () => {
       for (let i = 2; i >= 1; i--) {
         friendsName[i].textContent = friendsName[i - 1].textContent;
         friendsImage[i].setAttribute(
@@ -233,7 +236,7 @@ function createSlider(data) {
   if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
     //ARROW RIGHT >= 768
     let count = 0;
-    arrowRight.addEventListener("click", () => {
+    arrowRightM.addEventListener("click", () => {
       for (let i = 0; i <= 1; i++) {
         friendsName[i].textContent = friendsName[i + 1].textContent;
         friendsImage[i].setAttribute(
@@ -250,10 +253,8 @@ function createSlider(data) {
     });
 
     //ARROW LEFT >= 768
-    arrowLeft.addEventListener("click", () => {
-      for (let i = 1; i > 0; i--) {
-        console.log(i);
-        friendsName[i].textContent = friendsName[i - 1].textContent;
+    arrowLeftM.addEventListener("click", () => {
+      for (let i = 1; i > 0; i--) {        friendsName[i].textContent = friendsName[i - 1].textContent;
         friendsImage[i].setAttribute(
           "src",
           friendsImage[i - 1].attributes.src.nodeValue
@@ -270,7 +271,7 @@ function createSlider(data) {
   if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
     let count = 0;
     // ARROW RIGHT  >= 320
-    arrowRight.addEventListener("click", () => {
+    arrowRightM.addEventListener("click", () => {
       friendsName[0].textContent = data[count].name;
       friendsImage[0].setAttribute("src", data[count].img);
       count++;
@@ -279,7 +280,7 @@ function createSlider(data) {
       }
     });
     // ARROW LEFT  >= 320
-    arrowLeft.addEventListener("click", () => {
+    arrowLeftM.addEventListener("click", () => {
       friendsName[0].textContent = data[count].name;
       friendsImage[0].setAttribute("src", data[count].img);
       count++;
@@ -288,6 +289,7 @@ function createSlider(data) {
       }
     });
   }
+}
 }
 
 export { disableScroll, enableScroll };

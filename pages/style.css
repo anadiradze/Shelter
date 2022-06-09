@@ -298,6 +298,14 @@ a {
 .arrowLeft {
   grid-row: 2;
 }
+.arrowLeftMain{
+  grid-row: 2/3;
+
+}
+.arrowRightMain{
+  grid-row: 2;
+
+}
 .arrow {
   border: 2px solid #f1cdb3;
   box-sizing: border-box;

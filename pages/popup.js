@@ -156,16 +156,21 @@ fetch("../pets.json")
         function isName(obj) {
           return obj.name === `${friendElements[i].children[1].textContent}`;
         }
-        let targetObj = data.find(isName);
-        let name = targetObj.name;
-        let image = targetObj.img;
-        let type = targetObj.type;
-        let breed = targetObj.breed;
-        let description = targetObj.description;
-        let age = targetObj.age;
-        let inoculations = targetObj.inoculations;
-        let diseases = targetObj.diseases;
-        let parasites = targetObj.parasites;
+        function isImg(obj) {
+          return obj.img === `${friendElements[i].children[0].attributes.src.nodeValue}`;
+        }
+        let targetObjByName = data.find(isName);
+
+        let targetObjByImg = data.find(isImg);
+        let name = targetObjByName.name;
+        let image = targetObjByImg.img
+        let type = targetObjByImg.type;
+        let breed = targetObjByName.breed;
+        let description = targetObjByName.description;
+        let age = targetObjByName.age;
+        let inoculations = targetObjByName.inoculations;
+        let diseases = targetObjByName.diseases;
+        let parasites = targetObjByName.parasites;
         createPopupEl({
           name,
           image,
@@ -183,7 +188,7 @@ fetch("../pets.json")
     }
   });
 
- function removeDivWhenPressingX() {
+function removeDivWhenPressingX() {
   const popupCloseBtn = document.querySelector(".popupCloseBtn");
   const popupSection = document.querySelector("#popupSection");
   popupCloseBtn.addEventListener("click", removeSection);
@@ -192,7 +197,7 @@ fetch("../pets.json")
     enableScroll();
   }
 }
- 
+
 function removeDivWhenonDarkenedArea() {
   window.addEventListener("mouseup", function (event) {
     let box = document.querySelector("#popupMain");
@@ -223,4 +228,3 @@ function removeDivWhenonDarkenedArea() {
     };
   }
 } */
-
