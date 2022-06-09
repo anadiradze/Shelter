@@ -1,7 +1,21 @@
 import createElement from "./createElement/createElement.js";
-import { enableScroll } from "./main.js";
 const friendElements = document.querySelectorAll(".friendsflex");
 const friendsSection = document.querySelector("#friendsSection");
+
+function preventScroll(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
+}
+function disable(){
+document.querySelector('body').addEventListener('wheel', preventScroll);
+}
+
+function enable(){
+  document.querySelector('body').removeEventListener('wheel', preventScroll);
+}
+
 
 function createPopupEl({
   name,
@@ -152,7 +166,8 @@ fetch("../pets.json")
   .then((data) => {
     for (let i = 0; i < friendElements.length; i++) {
       friendElements[i].addEventListener("click", (e) => {
-        //disableScrollAccordingToWidth();
+        document.querySelector("body").addEventListener('wheel', preventScroll, {passive: false});
+        disable()
         function isName(obj) {
           return obj.name === `${friendElements[i].children[1].textContent}`;
         }
@@ -194,7 +209,7 @@ function removeDivWhenPressingX() {
   popupCloseBtn.addEventListener("click", removeSection);
   function removeSection() {
     popupSection.remove();
-    enableScroll();
+    enable()
   }
 }
 
@@ -205,26 +220,8 @@ function removeDivWhenonDarkenedArea() {
     if (popupSection != null) {
       if (event.target != box && event.target.parentNode != box) {
         popupSection.remove();
-        enableScroll();
+        enable()
       }
     }
   });
 }
-
-/* function disableScrollAccordingToWidth() {
-  if (window.screen.availWidth >= 1280) {
-    window.onscroll = function () {
-      window.scrollTo(0, 1450);
-    };
-  }
-  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
-    window.onscroll = function () {
-      window.scrollTo(0, 2300);
-    };
-  }
-  if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
-    window.onscroll = function () {
-      window.scrollTo(0, 1880);
-    };
-  }
-} */

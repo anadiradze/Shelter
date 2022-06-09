@@ -1,16 +1,15 @@
 import createElement from "./createElement/createElement.js";
-alert("disable scroll is in process, please do not deduct points for that")
 const burgerIcon = document.querySelector("#burger");
 const notOnlySection = document.querySelector("#notOnlySection");
 const headerinMain = document.querySelector("#headerinMain");
-function disableScroll() {
+/* function disableScroll() {
   window.onscroll = function () {
     window.scrollTo(window.scrollX, window.scrollY);
   };
-}
-function enableScroll() {
+} */
+/* function enableScroll() {
   window.onscroll = function () {};
-}
+} */
 function createHeaderAndNav() {
   const burgerMenuDiv = createElement({
     tag: "div",
@@ -134,14 +133,12 @@ burgerIcon.addEventListener("click", (e) => {
 
   notOnlySection.classList.add("notOnlySectionCovered");
   createHeaderAndNav();
-  disableScroll();
 
   headerinMain.classList.add("removeHeader");
   const BurgerIconinB = document.querySelector(".rotate");
   BurgerIconinB.addEventListener("click", removeEl);
   BurgerIconinB.addEventListener("click", () => {
     notOnlySection.classList.remove("notOnlySectionCovered");
-    enableScroll();
   });
   const burgerMenuDiv = document.querySelector("#burgerMenuDiv");
 
@@ -155,7 +152,6 @@ burgerIcon.addEventListener("click", (e) => {
           burgerMenuDiv.remove();
           headerinMain.classList.remove("removeHeader");
           notOnlySection.classList.remove("notOnlySectionCovered");
-          enableScroll();
         }
       }
     });
@@ -167,7 +163,6 @@ burgerIcon.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     headerinMain.classList.remove("removeHeader");
     notOnlySection.classList.remove("notOnlySectionCovered");
-    enableScroll();
   });
 
   const Li4 = document.querySelector(".Li4");
@@ -175,7 +170,6 @@ burgerIcon.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     headerinMain.classList.remove("removeHeader");
     notOnlySection.classList.remove("notOnlySectionCovered");
-    enableScroll();
   });
 });
 
@@ -292,4 +286,3 @@ function createSlider(data) {
 }
 }
 
-export { disableScroll, enableScroll };
