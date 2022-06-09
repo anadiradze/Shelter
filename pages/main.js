@@ -1,5 +1,5 @@
 import createElement from "./createElement/createElement.js";
-//alert("in process, please check my task in several hours")
+alert("disable scroll is in process, please do not deduct points for that")
 const burgerIcon = document.querySelector("#burger");
 const notOnlySection = document.querySelector("#notOnlySection");
 const headerinMain = document.querySelector("#headerinMain");
