@@ -535,12 +535,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   height: 877px;
   width: 1280px;
   background: rgba(41, 41, 41, 0.6);
   z-index: 1;
-  top: -97%;
 }
 .popupMain {
   width: 90rem;

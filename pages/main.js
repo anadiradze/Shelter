@@ -1,15 +1,9 @@
 import createElement from "./createElement/createElement.js";
+import { enable, disable, preventScroll } from "./popup.js";
 const burgerIcon = document.querySelector("#burger");
 const notOnlySection = document.querySelector("#notOnlySection");
 const headerinMain = document.querySelector("#headerinMain");
-/* function disableScroll() {
-  window.onscroll = function () {
-    window.scrollTo(window.scrollX, window.scrollY);
-  };
-} */
-/* function enableScroll() {
-  window.onscroll = function () {};
-} */
+
 function createHeaderAndNav() {
   const burgerMenuDiv = createElement({
     tag: "div",
@@ -123,6 +117,10 @@ function createHeaderAndNav() {
 
 const notOnlyContentWrapper = document.querySelector(".notOnlyContentWrapper");
 burgerIcon.addEventListener("click", (e) => {
+  document
+    .querySelector("body")
+    .addEventListener("wheel", preventScroll, { passive: false });
+  disable();
   const removeEl = (e) => {
     for (let i = 0; i < burgerMenuDiv.length; i++) {
       burgerMenuDiv[i].classList.remove("burgerMenuDiv");
@@ -149,6 +147,7 @@ burgerIcon.addEventListener("click", (e) => {
           event.target != burgerMenuDiv &&
           event.target.parentNode != burgerMenuDiv
         ) {
+          enable();
           burgerMenuDiv.remove();
           headerinMain.classList.remove("removeHeader");
           notOnlySection.classList.remove("notOnlySectionCovered");
@@ -181,7 +180,6 @@ fetch("../pets.json")
     createSlider(data);
   });
 
-
 const arrowRightM = document.querySelector(".arrowRightMain");
 const arrowLeftM = document.querySelector(".arrowLeftMain");
 
@@ -189,100 +187,100 @@ function createSlider(data) {
   const friendsImage = document.querySelectorAll("#friendsImage");
   const friendsName = document.querySelectorAll("#friendsName");
   const LearnMore = document.querySelectorAll("#LearnMore");
-  if(arrowRightM !== null || arrowLeftM!==null){
+  if (arrowRightM !== null || arrowLeftM !== null) {
+    if (window.screen.availWidth >= 1280) {
+      //ARROW RIGHT 1280
+      let count = 0;
+      arrowRightM.addEventListener("click", () => {
+        for (let i = 0; i < 2; i++) {
+          //0,1
+          friendsName[i].textContent = friendsName[i + 1].textContent;
+          friendsImage[i].setAttribute(
+            "src",
+            friendsImage[i + 1].attributes.src.nodeValue
+          );
+        }
+        friendsName[2].textContent = data[count].name;
+        friendsImage[2].setAttribute("src", data[count].img);
+        count++;
+        if (count > 7) {
+          count = 0;
+        }
+      });
 
-  if (window.screen.availWidth >= 1280) {
-    //ARROW RIGHT 1280
-    let count = 0;
-    arrowRightM.addEventListener("click", () => {
-      for (let i = 0; i < 2; i++) { //0,1
-        friendsName[i].textContent = friendsName[i + 1].textContent;
-        friendsImage[i].setAttribute(
-          "src",
-          friendsImage[i + 1].attributes.src.nodeValue
-        );
-      }
-      friendsName[2].textContent = data[count].name;
-      friendsImage[2].setAttribute("src", data[count].img);
-      count++;
-      if (count > 7) {
-        count = 0;
-      }
-    });
+      //ARROW LEFT 1280
+      arrowLeftM.addEventListener("click", () => {
+        for (let i = 2; i >= 1; i--) {
+          friendsName[i].textContent = friendsName[i - 1].textContent;
+          friendsImage[i].setAttribute(
+            "src",
+            friendsImage[i - 1].attributes.src.nodeValue
+          );
+        }
+        friendsName[0].textContent = data[count].name;
+        friendsImage[0].setAttribute("src", data[count].img);
+        count++;
+        if (count > 7) {
+          count = 0;
+        }
+      });
+    }
+    if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
+      //ARROW RIGHT >= 768
+      let count = 0;
+      arrowRightM.addEventListener("click", () => {
+        for (let i = 0; i <= 1; i++) {
+          friendsName[i].textContent = friendsName[i + 1].textContent;
+          friendsImage[i].setAttribute(
+            "src",
+            friendsImage[i + 1].attributes.src.nodeValue
+          );
+        }
+        friendsName[1].textContent = data[count].name;
+        friendsImage[1].setAttribute("src", data[count].img);
+        count++;
+        if (count > 7) {
+          count = 0;
+        }
+      });
 
-    //ARROW LEFT 1280
-    arrowLeftM.addEventListener("click", () => {
-      for (let i = 2; i >= 1; i--) {
-        friendsName[i].textContent = friendsName[i - 1].textContent;
-        friendsImage[i].setAttribute(
-          "src",
-          friendsImage[i - 1].attributes.src.nodeValue
-        );
-      }
-      friendsName[0].textContent = data[count].name;
-      friendsImage[0].setAttribute("src", data[count].img);
-      count++;
-      if (count > 7) {
-        count = 0;
-      }
-    });
-  }
-  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
-    //ARROW RIGHT >= 768
-    let count = 0;
-    arrowRightM.addEventListener("click", () => {
-      for (let i = 0; i <= 1; i++) {
-        friendsName[i].textContent = friendsName[i + 1].textContent;
-        friendsImage[i].setAttribute(
-          "src",
-          friendsImage[i + 1].attributes.src.nodeValue
-        );
-      }
-      friendsName[1].textContent = data[count].name;
-      friendsImage[1].setAttribute("src", data[count].img);
-      count++;
-      if (count > 7) {
-        count = 0;
-      }
-    });
-
-    //ARROW LEFT >= 768
-    arrowLeftM.addEventListener("click", () => {
-      for (let i = 1; i > 0; i--) {        friendsName[i].textContent = friendsName[i - 1].textContent;
-        friendsImage[i].setAttribute(
-          "src",
-          friendsImage[i - 1].attributes.src.nodeValue
-        );
-      }
-      friendsName[0].textContent = data[count].name;
-      friendsImage[0].setAttribute("src", data[count].img);
-      count++;
-      if (count > 7) {
-        count = 0;
-      }
-    });
-  }
-  if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
-    let count = 0;
-    // ARROW RIGHT  >= 320
-    arrowRightM.addEventListener("click", () => {
-      friendsName[0].textContent = data[count].name;
-      friendsImage[0].setAttribute("src", data[count].img);
-      count++;
-      if (count > 7) {
-        count = 0;
-      }
-    });
-    // ARROW LEFT  >= 320
-    arrowLeftM.addEventListener("click", () => {
-      friendsName[0].textContent = data[count].name;
-      friendsImage[0].setAttribute("src", data[count].img);
-      count++;
-      if (count > 7) {
-        count = 0;
-      }
-    });
+      //ARROW LEFT >= 768
+      arrowLeftM.addEventListener("click", () => {
+        for (let i = 1; i > 0; i--) {
+          friendsName[i].textContent = friendsName[i - 1].textContent;
+          friendsImage[i].setAttribute(
+            "src",
+            friendsImage[i - 1].attributes.src.nodeValue
+          );
+        }
+        friendsName[0].textContent = data[count].name;
+        friendsImage[0].setAttribute("src", data[count].img);
+        count++;
+        if (count > 7) {
+          count = 0;
+        }
+      });
+    }
+    if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
+      let count = 0;
+      // ARROW RIGHT  >= 320
+      arrowRightM.addEventListener("click", () => {
+        friendsName[0].textContent = data[count].name;
+        friendsImage[0].setAttribute("src", data[count].img);
+        count++;
+        if (count > 7) {
+          count = 0;
+        }
+      });
+      // ARROW LEFT  >= 320
+      arrowLeftM.addEventListener("click", () => {
+        friendsName[0].textContent = data[count].name;
+        friendsImage[0].setAttribute("src", data[count].img);
+        count++;
+        if (count > 7) {
+          count = 0;
+        }
+      });
+    }
   }
 }
-}
-

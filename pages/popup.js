@@ -1,21 +1,20 @@
 import createElement from "./createElement/createElement.js";
 const friendElements = document.querySelectorAll(".friendsflex");
 const friendsSection = document.querySelector("#friendsSection");
+const body = document.body;
+function preventScroll(e) {
+  e.preventDefault();
+  e.stopPropagation();
 
-function preventScroll(e){
-    e.preventDefault();
-    e.stopPropagation();
-
-    return false;
+  return false;
 }
-function disable(){
-document.querySelector('body').addEventListener('wheel', preventScroll);
-}
-
-function enable(){
-  document.querySelector('body').removeEventListener('wheel', preventScroll);
+function disable() {
+  document.querySelector("body").addEventListener("wheel", preventScroll);
 }
 
+function enable() {
+  document.querySelector("body").removeEventListener("wheel", preventScroll);
+}
 
 function createPopupEl({
   name,
@@ -166,19 +165,24 @@ fetch("../pets.json")
   .then((data) => {
     for (let i = 0; i < friendElements.length; i++) {
       friendElements[i].addEventListener("click", (e) => {
-        document.querySelector("body").addEventListener('wheel', preventScroll, {passive: false});
-        disable()
+        document
+          .querySelector("body")
+          .addEventListener("wheel", preventScroll, { passive: false });
+
         function isName(obj) {
           return obj.name === `${friendElements[i].children[1].textContent}`;
         }
         function isImg(obj) {
-          return obj.img === `${friendElements[i].children[0].attributes.src.nodeValue}`;
+          return (
+            obj.img ===
+            `${friendElements[i].children[0].attributes.src.nodeValue}`
+          );
         }
         let targetObjByName = data.find(isName);
 
         let targetObjByImg = data.find(isImg);
         let name = targetObjByName.name;
-        let image = targetObjByImg.img
+        let image = targetObjByImg.img;
         let type = targetObjByImg.type;
         let breed = targetObjByName.breed;
         let description = targetObjByName.description;
@@ -199,17 +203,22 @@ fetch("../pets.json")
         });
         removeDivWhenPressingX();
         removeDivWhenonDarkenedArea();
+        if (window.screen.availWidth < 768 && window.screen.availWidth >= 320) {
+          popupSection.style.top = window.scrollY - 100 + "px";
+        } else {
+          popupSection.style.top = window.scrollY + "px";
+        }
+        disable();
       });
     }
   });
-
 function removeDivWhenPressingX() {
   const popupCloseBtn = document.querySelector(".popupCloseBtn");
   const popupSection = document.querySelector("#popupSection");
   popupCloseBtn.addEventListener("click", removeSection);
   function removeSection() {
     popupSection.remove();
-    enable()
+    enable();
   }
 }
 
@@ -220,8 +229,10 @@ function removeDivWhenonDarkenedArea() {
     if (popupSection != null) {
       if (event.target != box && event.target.parentNode != box) {
         popupSection.remove();
-        enable()
+        enable();
       }
     }
   });
 }
+
+export { disable, enable, preventScroll };

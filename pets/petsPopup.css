@@ -3,12 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   height: 877px;
-  width: 1280px;
+  width: 1227px;
   background: rgba(41, 41, 41, 0.6);
-  z-index: 1;
-  top: -87%;
+
 }
 .popupMain {
   width: 90rem;
@@ -24,8 +23,8 @@
 }
 .popupCloseBtn {
   position: absolute;
-  top: -11%;
-  left: 100%;
+  top: -19%;
+  left: 93%;
 }
 .popupImg {
   height: 100%;
@@ -81,9 +80,8 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .popupSection {
     height: 87.7rem;
-    width: 75rem;
-    position: absolute;
-    top: 100%;
+    width: 70rem;
+
   }
   .popupMain {
     width: 63rem;
@@ -99,9 +97,8 @@
 @media (min-width: 320px) and (max-width: 767px) {
   .popupSection {
     height: 79.1rem;
-    width: 32rem;
-    position: absolute;
-    top: 100%;
+    width: 29rem;
+
   }
   .popupMain {
     width: 24rem;
